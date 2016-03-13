@@ -1,0 +1,242 @@
+[
+    {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\camera.png",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\src\\main\\res\\drawable\\camera.png"
+    },
+    {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_dark.xml",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_list_selector_background_transition_holo_dark.xml"
+    },
+    {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_tab_indicator_material.xml",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_tab_indicator_material.xml"
+    },
+    {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_full_material.xml",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_ratingbar_full_material.xml"
+    },
+    {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\gradient_btn_pink3d.xml",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\src\\main\\res\\drawable\\gradient_btn_pink3d.xml"
+    },
+    {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\images.jpg",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\src\\main\\res\\drawable\\images.jpg"
+    },
+    {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\camera_icon.png",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\src\\main\\res\\drawable\\camera_icon.png"
+    },
+    {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_indicator_material.xml",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_ratingbar_indicator_material.xml"
+    },
+    {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_track_material.xml",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_seekbar_track_material.xml"
+    },
+    {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\news_icon.png",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\src\\main\\res\\drawable\\news_icon.png"
+    },
+    {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\camera1.png",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\src\\main\\res\\drawable\\camera1.png"
+    },
+    {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_internal_bg.xml",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_cab_background_internal_bg.xml"
+    },
+    {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\style_white_btn.xml",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\src\\main\\res\\drawable\\style_white_btn.xml"
+    },
+    {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\done.png",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\src\\main\\res\\drawable\\done.png"
+    },
+    {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_top_material.xml",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_cab_background_top_material.xml"
+    },
+    {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background_dark.xml",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_dialog_material_background_dark.xml"
+    },
+    {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_thumb_material.xml",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_seekbar_thumb_material.xml"
+    },
+    {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\camera_01.png",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\src\\main\\res\\drawable\\camera_01.png"
+    },
+    {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_edit_text_material.xml",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_edit_text_material.xml"
+    },
+    {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_dark.xml",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_item_background_holo_dark.xml"
+    },
+    {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\checkbox_unchecked.png",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\src\\main\\res\\drawable\\checkbox_unchecked.png"
+    },
+    {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\checkbox_checked.png",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\src\\main\\res\\drawable\\checkbox_checked.png"
+    },
+    {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_colored_material.xml",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_btn_colored_material.xml"
+    },
+    {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\no_media.png",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\src\\main\\res\\drawable\\no_media.png"
+    },
+    {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_check_material.xml",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_btn_check_material.xml"
+    },
+    {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\three.jpg",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\src\\main\\res\\drawable\\three.jpg"
+    },
+    {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\four.jpg",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\src\\main\\res\\drawable\\four.jpg"
+    },
+    {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\on_toggle.png",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\src\\main\\res\\drawable\\on_toggle.png"
+    },
+    {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\checkbox_selected.png",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\src\\main\\res\\drawable\\checkbox_selected.png"
+    },
+    {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_dark.xml",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_list_selector_holo_dark.xml"
+    },
+    {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\checkbox_up.png",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\src\\main\\res\\drawable\\checkbox_up.png"
+    },
+    {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\on_focus_checkbox.xml",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\src\\main\\res\\drawable\\on_focus_checkbox.xml"
+    },
+    {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_light.xml",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_item_background_holo_light.xml"
+    },
+    {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\images1.jpg",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\src\\main\\res\\drawable\\images1.jpg"
+    },
+    {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\wheel_val.xml",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\src\\main\\res\\drawable\\wheel_val.xml"
+    },
+    {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\switchcamera.png",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\src\\main\\res\\drawable\\switchcamera.png"
+    },
+    {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\five.jpg",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\src\\main\\res\\drawable\\five.jpg"
+    },
+    {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_spinner_textfield_background_material.xml",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_spinner_textfield_background_material.xml"
+    },
+    {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\camera_view.png",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\src\\main\\res\\drawable\\camera_view.png"
+    },
+    {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\back.png",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\src\\main\\res\\drawable\\back.png"
+    },
+    {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_fab_background.xml",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.2.0\\res\\drawable\\design_fab_background.xml"
+    },
+    {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_light.xml",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_list_selector_holo_light.xml"
+    },
+    {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_radio_material.xml",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_btn_radio_material.xml"
+    },
+    {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_text_cursor_material.xml",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_text_cursor_material.xml"
+    },
+    {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_small_material.xml",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_ratingbar_small_material.xml"
+    },
+    {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_borderless_material.xml",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_btn_borderless_material.xml"
+    },
+    {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_default_mtrl_shape.xml",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_btn_default_mtrl_shape.xml"
+    },
+    {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\off_toggle.png",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\src\\main\\res\\drawable\\off_toggle.png"
+    },
+    {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\two.jpg",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\src\\main\\res\\drawable\\two.jpg"
+    },
+    {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\wheel_bg.xml",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\src\\main\\res\\drawable\\wheel_bg.xml"
+    },
+    {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_textfield_search_material.xml",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_textfield_search_material.xml"
+    },
+    {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background_light.xml",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_dialog_material_background_light.xml"
+    },
+    {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\gallary.png",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\src\\main\\res\\drawable\\gallary.png"
+    },
+    {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_switch_thumb_material.xml",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_switch_thumb_material.xml"
+    },
+    {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\right.png",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\src\\main\\res\\drawable\\right.png"
+    },
+    {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\six.jpg",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\src\\main\\res\\drawable\\six.jpg"
+    },
+    {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_light.xml",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_list_selector_background_transition_holo_light.xml"
+    },
+    {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_snackbar_background.xml",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.2.0\\res\\drawable\\design_snackbar_background.xml"
+    },
+    {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\layout.png",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\src\\main\\res\\drawable\\layout.png"
+    },
+    {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\one.jpg",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\src\\main\\res\\drawable\\one.jpg"
+    }
+]

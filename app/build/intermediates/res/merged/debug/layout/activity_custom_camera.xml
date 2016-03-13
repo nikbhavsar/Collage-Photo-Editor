@@ -1,0 +1,111 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:tag="portrait">
+
+    <FrameLayout
+        android:id="@+id/FrameLayout01"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <SurfaceView
+            android:id="@+id/camerapreview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+
+        <Button
+            android:id="@+id/CountDownButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start Timer"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/ibRetake"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_gravity="bottom|right"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="44dp"
+            android:background="@drawable/gradient_btn_pink3d"
+            android:text="Retake"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/ibUse"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_gravity="bottom|right"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="200dp"
+            android:background="@drawable/gradient_btn_pink3d"
+            android:text="OK"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <ImageButton
+            android:id="@+id/imagebutton_capture"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/camera1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="bottom|left"/>
+
+        <com.example.nikhar.photoeditor.comman.WheelView
+            android:id="@+id/slot_1"
+            android:layout_width="45dp"
+            android:layout_height="300dp"
+            android:layout_marginBottom="25dp"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="bottom|right"
+            />
+
+        <ToggleButton
+            android:id="@+id/toggleButton1"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/images"
+            android:text=""
+            />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="3"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold|italic"
+        android:textSize="70dp" />
+
+    <Button
+        android:id="@+id/turn"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/switchcamera" />
+
+</RelativeLayout>
+
+    <!-- <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent" android:orientation="vertical">
+      <SurfaceView android:id="@+id/camerapreview" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+      <Button android:id="@+id/turn" android:text="Turn" android:layout_width="50dp" android:layout_height="40dp" android:layout_alignParentTop="true" android:layout_centerHorizontal="true"  />
+      <Button android:id="@+id/back" android:text="Back" android:layout_width="50dp" android:layout_height="40dp" android:layout_alignParentTop="true"  />
+      <Button android:id="@+id/retake" android:text="Retake" android:layout_width="50dp" android:layout_height="40dp" android:layout_alignParentBottom="true" android:layout_alignParentLeft="true"  />
+      <Button android:id="@+id/Use" android:text="Use" android:layout_width="50dp" android:layout_height="40dp" android:layout_alignParentBottom="true" android:layout_alignParentRight="true"  />
+      <Button android:id="@+id/home" android:text="Home" android:layout_width="50dp" android:layout_height="40dp" android:layout_alignParentRight="true" android:layout_alignParentTop="true"  />
+      <Button android:id="@+id/button01" android:text="Button1" android:layout_width="50dp" android:layout_height="40dp" android:layout_alignLeft="@+id/turn" android:layout_alignParentBottom="true" />
+    </RelativeLayout> -->

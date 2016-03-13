@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\menu\\gallery.xml",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\src\\main\\res\\menu\\gallery.xml"
+    },
+    {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\menu\\main.xml",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\src\\main\\res\\menu\\main.xml"
+    }
+]

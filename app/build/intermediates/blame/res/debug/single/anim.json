@@ -1,0 +1,98 @@
+[
+    {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_top.xml",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\anim\\abc_slide_in_top.xml"
+    },
+    {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_fab_in.xml",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.2.0\\res\\anim\\design_fab_in.xml"
+    },
+    {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_exit.xml",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\anim\\abc_popup_exit.xml"
+    },
+    {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_grow_fade_in_from_bottom.xml",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
+    },
+    {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\anim\\slide_out_up.xml",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\src\\main\\res\\anim\\slide_out_up.xml"
+    },
+    {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_snackbar_in.xml",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.2.0\\res\\anim\\design_snackbar_in.xml"
+    },
+    {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\anim\\anim_slide_in_right.xml",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\src\\main\\res\\anim\\anim_slide_in_right.xml"
+    },
+    {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_out.xml",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\anim\\abc_fade_out.xml"
+    },
+    {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\anim\\to_middle.xml",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\src\\main\\res\\anim\\to_middle.xml"
+    },
+    {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_fab_out.xml",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.2.0\\res\\anim\\design_fab_out.xml"
+    },
+    {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\anim\\anim_slide_out_right.xml",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\src\\main\\res\\anim\\anim_slide_out_right.xml"
+    },
+    {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\anim\\from_middle.xml",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\src\\main\\res\\anim\\from_middle.xml"
+    },
+    {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_snackbar_out.xml",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.2.0\\res\\anim\\design_snackbar_out.xml"
+    },
+    {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\anim\\anim_slide_in_left.xml",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\src\\main\\res\\anim\\anim_slide_in_left.xml"
+    },
+    {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\anim\\slide_in_down.xml",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\src\\main\\res\\anim\\slide_in_down.xml"
+    },
+    {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\anim\\anim_slide_out_left.xml",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\src\\main\\res\\anim\\anim_slide_out_left.xml"
+    },
+    {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_bottom_sheet_slide_out.xml",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.2.0\\res\\anim\\design_bottom_sheet_slide_out.xml"
+    },
+    {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_bottom.xml",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\anim\\abc_slide_in_bottom.xml"
+    },
+    {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_bottom_sheet_slide_in.xml",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.2.0\\res\\anim\\design_bottom_sheet_slide_in.xml"
+    },
+    {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_enter.xml",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\anim\\abc_popup_enter.xml"
+    },
+    {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_shrink_fade_out_from_bottom.xml",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\anim\\abc_shrink_fade_out_from_bottom.xml"
+    },
+    {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_top.xml",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\anim\\abc_slide_out_top.xml"
+    },
+    {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_in.xml",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\anim\\abc_fade_in.xml"
+    },
+    {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_bottom.xml",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\anim\\abc_slide_out_bottom.xml"
+    }
+]

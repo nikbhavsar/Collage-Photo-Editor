@@ -1,0 +1,31 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.javacodegeeks.android.menu.MainActivity" >
+
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:title="Settings"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/Layout"
+        android:orderInCategory="200"
+        android:title="@string/Layout"
+        app:showAsAction="always"
+        android:icon="@drawable/layout"/>
+    <item
+        android:id="@+id/Camera"
+        android:orderInCategory="300"
+        android:title="@string/Camera"
+        app:showAsAction="always"
+        android:icon="@drawable/camera"/>
+    <item
+        android:id="@+id/Gallary"
+        android:orderInCategory="400"
+        android:title="@string/Gallery"
+        android:icon="@drawable/gallary"
+        app:showAsAction="always"/>
+
+
+</menu>

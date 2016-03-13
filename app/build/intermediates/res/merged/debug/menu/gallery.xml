@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:title="Settings"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/done"
+        android:orderInCategory="300"
+        android:title="done"
+        android:icon="@drawable/done"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/back"
+        android:orderInCategory="200"
+        android:title="back"
+        android:icon="@drawable/back"
+        app:showAsAction="always"/>
+
+</menu>
