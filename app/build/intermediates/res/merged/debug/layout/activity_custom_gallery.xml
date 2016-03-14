@@ -7,15 +7,10 @@
     android:background="@color/maincolor"
     android:orientation="vertical">
 
-    <android.support.v7.widget.Toolbar
-
+    <include
         android:id="@+id/app_bar"
-        android:layout_height="wrap_content"
-        android:minHeight="?attr/actionBarSize"
-        android:layout_width="match_parent"
-        android:background="@color/colorPrimary"
+        layout="@layout/app_bar" />
 
-        />
 
     <FrameLayout
         android:layout_width="fill_parent"
@@ -69,11 +64,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:textStyle="bold"
-            android:layout_marginLeft="190dp"
+            android:layout_marginLeft="170dp"
             android:text="0"
             android:textColor="#FFFFFF" />
-
     </RelativeLayout>
 
 

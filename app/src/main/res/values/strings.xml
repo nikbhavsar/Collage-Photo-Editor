@@ -3,4 +3,5 @@
     <string name="Layout">Layout</string>
     <string name="Camera">Camera</string>
     <string name="Gallery">Gallary</string>
+    <string name="title_activity_custom_camera">CustomCameraActivity</string>
 </resources>
