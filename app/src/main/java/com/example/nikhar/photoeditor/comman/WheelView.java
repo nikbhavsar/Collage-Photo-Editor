@@ -675,6 +675,7 @@ public class WheelView extends View {
                 }
         }
                
+
         public void scroll(int itemsToScroll, int time) {
                 int distance = itemsToScroll * getItemHeight() - scrollingOffset;
         scroller.scroll(distance, time);

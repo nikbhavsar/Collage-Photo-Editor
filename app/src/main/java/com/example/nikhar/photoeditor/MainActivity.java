@@ -178,6 +178,7 @@ public class MainActivity extends AppCompatActivity {
 
         }
         if (id == R.id.Camera) {
+
             MainActivity.CameraArry.clear();
             if (checkTemplateNum != 0) {
                 Intent intent = new Intent(getApplicationContext(),
@@ -187,7 +188,6 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(),
                         "Select no. of images.", Toast.LENGTH_SHORT).show();
             }
-
         }
 
 
@@ -540,6 +540,8 @@ public class MainActivity extends AppCompatActivity {
 
     private class setImageCameraAsyncTask extends AsyncTask<Void, Void, Void> {
 
+
+
         @Override
         protected void onPreExecute() {
 
@@ -710,6 +712,7 @@ public class MainActivity extends AppCompatActivity {
 
         }
     }
+
 
     /****************************************************************************
      * mSetImageAsyncTask

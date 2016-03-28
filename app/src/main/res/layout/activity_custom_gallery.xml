@@ -7,9 +7,14 @@
     android:background="@color/maincolor"
     android:orientation="vertical">
 
-    <include
-        android:id="@+id/app_bar"
-        layout="@layout/app_bar" />
+    <android.support.v7.widget.Toolbar
+
+        android:id="@+id/my_awesome_toolbar"
+        android:layout_height="60dp"
+        android:layout_width="match_parent"
+        android:background="?attr/colorPrimary"
+
+        />
 
 
     <FrameLayout
@@ -64,9 +69,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="170dp"
+            android:layout_marginLeft="190dp"
             android:text="0"
             android:textColor="#FFFFFF" />
+
+        <ImageButton
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="320dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/done"/>
+
     </RelativeLayout>
 
 

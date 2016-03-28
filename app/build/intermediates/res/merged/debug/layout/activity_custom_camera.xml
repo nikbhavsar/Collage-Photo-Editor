@@ -56,7 +56,7 @@
             android:layout_marginBottom="10dp"
             android:layout_gravity="bottom|left"/>
 
-        <com.kailash.myphoto.comman.WheelView
+        <com.example.nikhar.photoeditor.comman.WheelView
             android:id="@+id/slot_1"
             android:layout_width="45dp"
             android:layout_height="300dp"
@@ -100,3 +100,12 @@
 
 </RelativeLayout>
 
+    <!-- <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent" android:orientation="vertical">
+      <SurfaceView android:id="@+id/camerapreview" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+      <Button android:id="@+id/turn" android:text="Turn" android:layout_width="50dp" android:layout_height="40dp" android:layout_alignParentTop="true" android:layout_centerHorizontal="true"  />
+      <Button android:id="@+id/back" android:text="Back" android:layout_width="50dp" android:layout_height="40dp" android:layout_alignParentTop="true"  />
+      <Button android:id="@+id/retake" android:text="Retake" android:layout_width="50dp" android:layout_height="40dp" android:layout_alignParentBottom="true" android:layout_alignParentLeft="true"  />
+      <Button android:id="@+id/Use" android:text="Use" android:layout_width="50dp" android:layout_height="40dp" android:layout_alignParentBottom="true" android:layout_alignParentRight="true"  />
+      <Button android:id="@+id/home" android:text="Home" android:layout_width="50dp" android:layout_height="40dp" android:layout_alignParentRight="true" android:layout_alignParentTop="true"  />
+      <Button android:id="@+id/button01" android:text="Button1" android:layout_width="50dp" android:layout_height="40dp" android:layout_alignLeft="@+id/turn" android:layout_alignParentBottom="true" />
+    </RelativeLayout> -->

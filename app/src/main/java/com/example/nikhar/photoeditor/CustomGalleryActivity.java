@@ -8,9 +8,14 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.provider.MediaStore;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.app.AppCompatCallback;
+import android.support.v7.app.AppCompatDelegate;
+import android.support.v7.view.ActionMode;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
@@ -24,6 +29,7 @@ import android.widget.Toast;
 import com.example.nikhar.photoeditor.galary.Action;
 import com.example.nikhar.photoeditor.galary.CustomGallery;
 import com.example.nikhar.photoeditor.galary.GalleryAdapter;
+import com.example.nikhar.photoeditor.galary.RootActivity;
 import com.nostra13.universalimageloader.cache.memory.impl.WeakMemoryCache;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
@@ -33,7 +39,7 @@ import com.nostra13.universalimageloader.core.assist.ImageScaleType;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class CustomGalleryActivity extends AppCompatActivity {
+public class CustomGalleryActivity extends RootActivity implements AppCompatCallback {
 
     private Toolbar toolbar;
     private Menu menu;
@@ -50,15 +56,25 @@ public class CustomGalleryActivity extends AppCompatActivity {
     String action;
     private ImageLoader imageLoader;
 
-
+    private AppCompatDelegate delegate;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_custom_gallery);
 
-        toolbar = (Toolbar) findViewById(R.id.app_bar);
-        toolbar.setTitle("Choose Photo");
-        setSupportActionBar(toolbar);
+        delegate = AppCompatDelegate.create(this, this);
+
+        //we need to call the onCreate() of the AppCompatDelegate
+        delegate.onCreate(savedInstanceState);
+
+        //we use the delegate to inflate the layout
+        delegate.setContentView(R.layout.activity_custom_gallery);
+
+        //Finally, let's add the Toolbar
+        Toolbar toolbar= (Toolbar) findViewById(R.id.my_awesome_toolbar);
+        delegate.setSupportActionBar(toolbar);
+
+
         txtCount = (TextView) findViewById(R.id.txtCount);
         img_done = (ImageView) findViewById(R.id.img_done);
 
@@ -254,10 +270,19 @@ public class CustomGalleryActivity extends AppCompatActivity {
     }
 
 
+    @Override
+    public void onSupportActionModeStarted(ActionMode mode) {
 
+    }
 
+    @Override
+    public void onSupportActionModeFinished(ActionMode mode) {
 
+    }
 
-
-
+    @Nullable
+    @Override
+    public ActionMode onWindowStartingSupportActionMode(ActionMode.Callback callback) {
+        return null;
+    }
 }
