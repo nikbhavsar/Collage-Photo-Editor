@@ -3,5 +3,19 @@
     <string name="Layout">Layout</string>
     <string name="Camera">Camera</string>
     <string name="Gallery">Gallary</string>
-    <string name="title_activity_custom_camera">CustomCameraActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_adjust_skin_tone">Adjust Skin</string>
+    <string name="Add_color_Effect">Color Effect</string>
+
+    <string name="thimName">thimname</string>
+    <string name="pink">pink</string>
+    <string name="orange">orange</string>
+    <string name="deep_orange">deep orange</string>
+    <string name="lingh_blue">light blue</string>
+    <string name="light_green">light green</string>
+    <string name="indigo">indigo</string>
+    <string name="perple">perple</string>
+    <string name="red">red</string>
+    <string name="teal">teal</string>
+
 </resources>

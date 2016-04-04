@@ -2,29 +2,24 @@ package com.example.nikhar.photoeditor;
 
 import android.app.Activity;
 import android.app.Dialog;
-import android.app.Notification;
 import android.app.ProgressDialog;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
-import android.drm.DrmStore;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
 import android.net.Uri;
 import android.os.AsyncTask;
-import android.os.Environment;
-import android.support.v4.app.NotificationCompat;
-import android.support.v4.app.NotificationCompatBase;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
+import android.os.Environment;
+import android.provider.MediaStore;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.provider.MediaStore;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.FrameLayout;
@@ -34,9 +29,6 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.nikhar.photoeditor.comman.Touch;
-import com.example.nikhar.photoeditor.galary.Action;
-import com.example.nikhar.photoeditor.galary.CustomGallery;
 import com.nostra13.universalimageloader.cache.memory.impl.WeakMemoryCache;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
@@ -51,7 +43,56 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
-public class MainActivity extends AppCompatActivity {
+
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+
+import android.app.Activity;
+import android.app.Dialog;
+import android.app.ProgressDialog;
+import android.content.ContentResolver;
+import android.content.Context;
+import android.content.Intent;
+import android.database.Cursor;
+import android.graphics.Bitmap;
+import android.graphics.Bitmap.CompressFormat;
+import android.graphics.BitmapFactory;
+import android.graphics.Matrix;
+import android.net.Uri;
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.os.Environment;
+import android.provider.MediaStore;
+import android.util.Log;
+import android.view.Gravity;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.WindowManager;
+import android.widget.FrameLayout;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
+import android.widget.Toast;
+import android.widget.Toolbar;
+
+import com.example.nikhar.photoeditor.comman.Constance;
+import com.example.nikhar.photoeditor.comman.Touch;
+import com.example.nikhar.photoeditor.galary.Action;
+import com.example.nikhar.photoeditor.galary.CustomGallery;
+import com.nostra13.universalimageloader.cache.memory.impl.WeakMemoryCache;
+import com.nostra13.universalimageloader.core.DisplayImageOptions;
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
+import com.nostra13.universalimageloader.core.assist.ImageScaleType;
+
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private ImageView img_camera;
     private ImageView img_gallery;
@@ -108,19 +149,18 @@ public class MainActivity extends AppCompatActivity {
     private File imagePath;
     private setImageAsyncTask mSetImageAsyncTask;
     private setImageCameraAsyncTask mSetImageCameraAsyncTask;
-
-    
-    Toolbar toolbar;
+    private android.support.v7.widget.Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        toolbar = (Toolbar) findViewById(R.id.app_bar);
+        toolbar = (android.support.v7.widget.Toolbar) findViewById(R.id.app_bar);
         setSupportActionBar(toolbar);
-
         initComponent();
+       ImageLoader imageLoader = ImageLoader.getInstance();
+        imageLoader.init(ImageLoaderConfiguration.createDefault(MainActivity.this));
 
         img_t1_1.setOnTouchListener(new Touch());
 
@@ -152,9 +192,12 @@ public class MainActivity extends AppCompatActivity {
 
         initImageLoader();
 
+
+
     }
 
-    @Override
+
+
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
@@ -189,141 +232,13 @@ public class MainActivity extends AppCompatActivity {
                         "Select no. of images.", Toast.LENGTH_SHORT).show();
             }
         }
-
-
-
         return super.onOptionsItemSelected(item);
     }
 
-    private void showTemplateDialogNew() {
-        final ImageView tvOne, tvTwo, tvThree, tvFour, tvFive, tvSix;
-        final TextView tvCancel;
-        final Dialog dialog = new Dialog(MainActivity.this, R.style.picture_dialog_style);
-        dialog.setContentView(R.layout.dialog_select_template_new);
-        final WindowManager.LayoutParams wlmp = dialog.getWindow().getAttributes();
-        wlmp.gravity = Gravity.BOTTOM;
-        wlmp.width = android.view.WindowManager.LayoutParams.FILL_PARENT;
-        wlmp.height = android.view.WindowManager.LayoutParams.WRAP_CONTENT;
-        dialog.getWindow().setAttributes(wlmp);
-        dialog.show();
 
-        tvOne = (ImageView) dialog.findViewById(R.id.imgOne);
-        tvTwo = (ImageView) dialog.findViewById(R.id.imgTwo);
-        tvThree = (ImageView) dialog.findViewById(R.id.imgThree);
-        tvFour = (ImageView) dialog.findViewById(R.id.imgFour);
-        tvFive = (ImageView) dialog.findViewById(R.id.imgFive);
-        tvSix = (ImageView) dialog.findViewById(R.id.imgSix);
-        tvCancel = (TextView) dialog.findViewById(R.id.dialog_delete_record_tvCancel);
-
-
-        tvOne.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                dialog.cancel();
-
-                checkTemplateNum = 1;
-                ll_home_one.setVisibility(View.VISIBLE);
-                ll_home_two.setVisibility(View.GONE);
-                ll_home_three.setVisibility(View.GONE);
-                ll_home_four.setVisibility(View.GONE);
-                ll_home_five.setVisibility(View.GONE);
-                ll_home_six.setVisibility(View.GONE);
-
-            }
-        });
-
-        tvTwo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                dialog.cancel();
-
-                checkTemplateNum = 2;
-                ll_home_one.setVisibility(View.GONE);
-                ll_home_two.setVisibility(View.VISIBLE);
-                ll_home_three.setVisibility(View.GONE);
-                ll_home_four.setVisibility(View.GONE);
-                ll_home_five.setVisibility(View.GONE);
-                ll_home_six.setVisibility(View.GONE);
-
-            }
-        });
-
-        tvThree.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                dialog.cancel();
-
-                checkTemplateNum = 3;
-                ll_home_one.setVisibility(View.GONE);
-                ll_home_two.setVisibility(View.GONE);
-                ll_home_three.setVisibility(View.VISIBLE);
-                ll_home_four.setVisibility(View.GONE);
-                ll_home_five.setVisibility(View.GONE);
-                ll_home_six.setVisibility(View.GONE);
-
-            }
-        });
-
-
-        tvFour.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                dialog.cancel();
-
-                checkTemplateNum = 4;
-                ll_home_four.setVisibility(View.VISIBLE);
-                ll_home_one.setVisibility(View.GONE);
-                ll_home_two.setVisibility(View.GONE);
-                ll_home_three.setVisibility(View.GONE);
-                ll_home_five.setVisibility(View.GONE);
-                ll_home_six.setVisibility(View.GONE);
-
-            }
-        });
-
-        tvFive.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                dialog.cancel();
-
-                checkTemplateNum = 5;
-                ll_home_four.setVisibility(View.GONE);
-                ll_home_one.setVisibility(View.GONE);
-                ll_home_two.setVisibility(View.GONE);
-                ll_home_three.setVisibility(View.GONE);
-                ll_home_five.setVisibility(View.VISIBLE);
-                ll_home_six.setVisibility(View.GONE);
-
-            }
-        });
-
-        tvSix.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-
-                dialog.cancel();
-                checkTemplateNum = 6;
-                ll_home_six.setVisibility(View.VISIBLE);
-                ll_home_one.setVisibility(View.GONE);
-                ll_home_two.setVisibility(View.GONE);
-                ll_home_three.setVisibility(View.GONE);
-                ll_home_four.setVisibility(View.GONE);
-                ll_home_five.setVisibility(View.GONE);
-
-            }
-        });
-
-        tvCancel.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                dialog.cancel();
-            }
-        });
-
-    }
     private void initComponent()
     {
+
         img_done = (ImageView) findViewById(R.id.img_done);
         img_thim= (ImageView) findViewById(R.id.img_thim);
 
@@ -362,9 +277,10 @@ public class MainActivity extends AppCompatActivity {
         ll_home_four = (LinearLayout) findViewById(R.id.ll_four);
         ll_home_five = (LinearLayout) findViewById(R.id.ll_five);
         ll_home_six = (LinearLayout) findViewById(R.id.ll_six);
-
+        rltabbar=(RelativeLayout)findViewById(R.id.rltabbar);
         rlfooter=(RelativeLayout)findViewById(R.id.rlfooter);
 
+        img_done.setOnClickListener(this);
 
 
 
@@ -400,7 +316,24 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    public void onClick(View v) {
 
+        switch (v.getId()) {
+            case R.id.img_done:
+                Bitmap bitmap = takeScreenshot();
+                saveBitmap(bitmap);
+                Intent intenEffect = new Intent(getApplicationContext(),EffectActivity.class);
+                intenEffect.putExtra(Constance.IMAGE_PATH, imagePath.toString());
+                startActivity(intenEffect);
+
+                break;
+
+            default:
+                break;
+        }
+
+    }
 
     private Bitmap decodeUri(Uri selectedImage) throws FileNotFoundException {
         // Decode image size
@@ -527,6 +460,139 @@ public class MainActivity extends AppCompatActivity {
         imageLoader.init(config);
     }
 
+
+    private void showTemplateDialogNew()
+    {
+        final ImageView tvOne,tvTwo,tvThree ,tvFour,tvFive,tvSix;
+        final TextView tvCancel;
+        final Dialog dialog = new Dialog(MainActivity.this, R.style.picture_dialog_style);
+        dialog.setContentView(R.layout.dialog_select_template_new);
+        final WindowManager.LayoutParams wlmp = dialog.getWindow().getAttributes();
+        wlmp.gravity = Gravity.BOTTOM;
+        wlmp.width = android.view.WindowManager.LayoutParams.FILL_PARENT;
+        wlmp.height = android.view.WindowManager.LayoutParams.WRAP_CONTENT;
+        dialog.getWindow().setAttributes(wlmp);
+        dialog.show();
+
+        tvOne = (ImageView) dialog.findViewById(R.id.imgOne);
+        tvTwo = (ImageView) dialog.findViewById(R.id.imgTwo);
+        tvThree = (ImageView) dialog.findViewById(R.id.imgThree);
+        tvFour = (ImageView) dialog.findViewById(R.id.imgFour);
+        tvFive = (ImageView) dialog.findViewById(R.id.imgFive);
+        tvSix = (ImageView) dialog.findViewById(R.id.imgSix);
+        tvCancel = (TextView) dialog.findViewById(R.id.dialog_delete_record_tvCancel);
+
+
+
+        tvOne.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.cancel();
+
+                checkTemplateNum = 1;
+                ll_home_one.setVisibility(View.VISIBLE);
+                ll_home_two.setVisibility(View.GONE);
+                ll_home_three.setVisibility(View.GONE);
+                ll_home_four.setVisibility(View.GONE);
+                ll_home_five.setVisibility(View.GONE);
+                ll_home_six.setVisibility(View.GONE);
+
+            }
+        });
+
+        tvTwo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.cancel();
+
+                checkTemplateNum = 2;
+                ll_home_one.setVisibility(View.GONE);
+                ll_home_two.setVisibility(View.VISIBLE);
+                ll_home_three.setVisibility(View.GONE);
+                ll_home_four.setVisibility(View.GONE);
+                ll_home_five.setVisibility(View.GONE);
+                ll_home_six.setVisibility(View.GONE);
+
+            }
+        });
+
+        tvThree.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.cancel();
+
+                checkTemplateNum = 3;
+                ll_home_one.setVisibility(View.GONE);
+                ll_home_two.setVisibility(View.GONE);
+                ll_home_three.setVisibility(View.VISIBLE);
+                ll_home_four.setVisibility(View.GONE);
+                ll_home_five.setVisibility(View.GONE);
+                ll_home_six.setVisibility(View.GONE);
+
+            }
+        });
+
+
+        tvFour.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.cancel();
+
+                checkTemplateNum = 4;
+                ll_home_four.setVisibility(View.VISIBLE);
+                ll_home_one.setVisibility(View.GONE);
+                ll_home_two.setVisibility(View.GONE);
+                ll_home_three.setVisibility(View.GONE);
+                ll_home_five.setVisibility(View.GONE);
+                ll_home_six.setVisibility(View.GONE);
+
+            }
+        });
+
+        tvFive.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.cancel();
+
+                checkTemplateNum = 5;
+                ll_home_four.setVisibility(View.GONE);
+                ll_home_one.setVisibility(View.GONE);
+                ll_home_two.setVisibility(View.GONE);
+                ll_home_three.setVisibility(View.GONE);
+                ll_home_five.setVisibility(View.VISIBLE);
+                ll_home_six.setVisibility(View.GONE);
+
+            }
+        });
+
+        tvSix.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                dialog.cancel();
+                checkTemplateNum = 6;
+                ll_home_six.setVisibility(View.VISIBLE);
+                ll_home_one.setVisibility(View.GONE);
+                ll_home_two.setVisibility(View.GONE);
+                ll_home_three.setVisibility(View.GONE);
+                ll_home_four.setVisibility(View.GONE);
+                ll_home_five.setVisibility(View.GONE);
+
+            }
+        });
+
+        tvCancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.cancel();
+            }
+        });
+
+    }
+
+
+
     /****************************************************************************
      * mSetImageAsyncTask
      *
@@ -539,8 +605,6 @@ public class MainActivity extends AppCompatActivity {
      ***************************************************************************/
 
     private class setImageCameraAsyncTask extends AsyncTask<Void, Void, Void> {
-
-
 
         @Override
         protected void onPreExecute() {
@@ -712,7 +776,6 @@ public class MainActivity extends AppCompatActivity {
 
         }
     }
-
 
     /****************************************************************************
      * mSetImageAsyncTask
@@ -976,7 +1039,4 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    }
-
-
-
+}

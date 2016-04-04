@@ -24,7 +24,7 @@ public class Touch implements OnTouchListener {
 	// Remember some things for zooming  
 	PointF start = new PointF();
 	PointF mid = new PointF();
-	float oldDist = 1f;  
+	double oldDist = 1f;
 	float d = 0f;
 	float[] lastEvent = null;
 	float newRot = 0f;
@@ -80,13 +80,14 @@ public class Touch implements OnTouchListener {
             }
             else if (mode == ZOOM && event.getPointerCount() == 2)
             {
-                    float newDist = spacing(event);
+                    double newDist = spacing(event);
                     Log.v("SS", "Count=" + event.getPointerCount());
                     Log.v("SS", "newDist=" + newDist);
                     matrix.set(savedMatrix);
                     if (newDist > 10f)
                     {
-                            float scale = newDist / oldDist;
+                            float oldDist = (float)this.oldDist;
+                            float scale = (float) newDist / oldDist;
                             System.out.println(newDist+" : "+oldDist+" : "+scale+" : "+mid.x+" : "+mid.y);
                             System.out.println("### Scale Value :: "+scale);
                             matrix.postScale(scale, scale, mid.x, mid.y);
@@ -139,8 +140,7 @@ public class Touch implements OnTouchListener {
 	private float spacing(MotionEvent event) {
 		float x = event.getX(0) - event.getX(1);  
 		float y = event.getY(0) - event.getY(1);  
-		Float a = (float) Math.sqrt(x * x + y * y);
-        return a;
+		return (float)Math.sqrt(x * x + y * y);
 	}  
 
 	/** Calculate the mid point of the first two fingers */  

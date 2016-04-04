@@ -6,7 +6,6 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Timer;
-import java.util.logging.FileHandler;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
@@ -23,7 +22,6 @@ import android.hardware.Camera;
 import android.hardware.Camera.CameraInfo;
 import android.hardware.Camera.PictureCallback;
 import android.media.ExifInterface;
-import android.nfc.Tag;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -94,7 +92,7 @@ public class CustomCameraActivity extends Activity implements
         rl = (RelativeLayout) findViewById(R.id.rl);
 
         // Toast.makeText(getApplicationContext(),rl.getTag().toString(),Toast.LENGTH_LONG).show();
-      hasFlash = getPackageManager().hasSystemFeature(
+        hasFlash = getPackageManager().hasSystemFeature(
                 PackageManager.FEATURE_CAMERA_FLASH);
         getWindow().setFormat(PixelFormat.UNKNOWN);
         surfaceView = (SurfaceView) findViewById(R.id.camerapreview);
@@ -141,7 +139,7 @@ public class CustomCameraActivity extends Activity implements
 
         if (Camera.getNumberOfCameras() >= 2) {
             turn.setVisibility(View.VISIBLE);
-            turn.setOnClickListener(new View.OnClickListener() {
+            turn.setOnClickListener(new OnClickListener() {
 
                 @Override
                 public void onClick(View v) {
@@ -167,7 +165,7 @@ public class CustomCameraActivity extends Activity implements
 		 * home=(Button)findViewById(R.id.home);
 		 */
 
-        ibRetake.setOnClickListener(new View.OnClickListener() {
+        ibRetake.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
                 // Toast.makeText(getApplicationContext(),rl.getTag().toString(),Toast.LENGTH_LONG).show();
 
@@ -203,7 +201,7 @@ public class CustomCameraActivity extends Activity implements
         });
 
         // Add a listener to the Use button
-        ibUse.setOnClickListener(new View.OnClickListener() {
+        ibUse.setOnClickListener(new OnClickListener() {
             public void onClick(View v)
             {
                 Log.e("", "uuuuuuuuuuuuuuu" + MainActivity.CameraArry.toString());
@@ -245,7 +243,7 @@ public class CustomCameraActivity extends Activity implements
 		 * stub camera.startPreview(); flag=0; } });
 		 */
 
-        cap_btn.setOnClickListener(new View.OnClickListener() {
+        cap_btn.setOnClickListener(new OnClickListener() {
 
             @Override
             public void onClick(View v) {
@@ -542,7 +540,7 @@ public class CustomCameraActivity extends Activity implements
                         FileOutputStream fos = new FileOutputStream(file);
                         fos.write(data);
                         fos.close();
-                        MainActivity.CameraArry.add(file.getAbsolutePath());
+                     MainActivity.CameraArry.add(file.getAbsolutePath());
 
 
 
@@ -637,20 +635,17 @@ public class CustomCameraActivity extends Activity implements
 
     @Override
     public void surfaceCreated(SurfaceHolder holder) {
-        // to draw.
+        if (vesion == 1) {
+            Camera.open(which);
+        } else {
+            camera = Camera.open();
+        }
 
+        setCameraDisplayOrientation(CustomCameraActivity.this,
+                CameraInfo.CAMERA_FACING_BACK, camera);
 
-          if (vesion == 1) {
-               Camera.open(which);
-           } else {
-               camera = Camera.open(0);
-           }
-
-           setCameraDisplayOrientation(CustomCameraActivity.this,
-                   CameraInfo.CAMERA_FACING_BACK, camera);
-
-
-		/* * try { Camera.Parameters parameters = camera.getParameters();
+		/*
+		 * try { Camera.Parameters parameters = camera.getParameters();
 		 * 
 		 * if (this.getResources().getConfiguration().orientation !=
 		 * Configuration.ORIENTATION_LANDSCAPE) { parameters.set("orientation",
@@ -674,7 +669,6 @@ public class CustomCameraActivity extends Activity implements
                 parameters.set("orientation", "portrait");
                 parameters.setRotation(90);
                 camera.setDisplayOrientation(90);
-
             }
             if (isFlashOn) {
                 parameters.setFlashMode(Camera.Parameters.FLASH_MODE_AUTO);

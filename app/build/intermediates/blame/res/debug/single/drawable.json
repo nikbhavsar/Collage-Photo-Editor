@@ -164,16 +164,16 @@
         "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\src\\main\\res\\drawable\\four.jpg"
     },
     {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\twitter_btn.png",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\src\\main\\res\\drawable\\twitter_btn.png"
+    },
+    {
         "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\on_toggle.png",
         "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\src\\main\\res\\drawable\\on_toggle.png"
     },
     {
         "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\checkbox_selected.png",
         "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\src\\main\\res\\drawable\\checkbox_selected.png"
-    },
-    {
-        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\twitter_btn.png",
-        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\src\\main\\res\\drawable\\twitter_btn.png"
     },
     {
         "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\facebook_btn.png",
@@ -204,12 +204,12 @@
         "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\src\\main\\res\\drawable\\gradient_btn_red3d.xml"
     },
     {
-        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\five.jpg",
-        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\src\\main\\res\\drawable\\five.jpg"
-    },
-    {
         "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\home.png",
         "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\src\\main\\res\\drawable\\home.png"
+    },
+    {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\five.jpg",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\src\\main\\res\\drawable\\five.jpg"
     },
     {
         "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\gradient_btn_perple3d.xml",
@@ -232,12 +232,12 @@
         "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\src\\main\\res\\drawable\\back.png"
     },
     {
-        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_fab_background.xml",
-        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.2.0\\res\\drawable\\design_fab_background.xml"
-    },
-    {
         "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\gallery_01.png",
         "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\src\\main\\res\\drawable\\gallery_01.png"
+    },
+    {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_fab_background.xml",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.2.0\\res\\drawable\\design_fab_background.xml"
     },
     {
         "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\bg1.jpg",
@@ -272,12 +272,12 @@
         "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_btn_borderless_material.xml"
     },
     {
-        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_default_mtrl_shape.xml",
-        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_btn_default_mtrl_shape.xml"
-    },
-    {
         "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\gradient_etbg.xml",
         "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\src\\main\\res\\drawable\\gradient_etbg.xml"
+    },
+    {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_default_mtrl_shape.xml",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_btn_default_mtrl_shape.xml"
     },
     {
         "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\layout_bg.xml",
@@ -306,6 +306,10 @@
     {
         "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\gallary.png",
         "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\src\\main\\res\\drawable\\gallary.png"
+    },
+    {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_launcher.png",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\src\\main\\res\\drawable\\ic_launcher.png"
     },
     {
         "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_switch_thumb_material.xml",

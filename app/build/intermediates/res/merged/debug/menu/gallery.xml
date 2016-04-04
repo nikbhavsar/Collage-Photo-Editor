@@ -10,14 +10,14 @@
     <item
         android:id="@+id/done"
         android:orderInCategory="300"
-        android:title="@string/Layout"
+        android:title="Done"
         app:showAsAction="always"
         android:icon="@drawable/done"/>
 
     <item
         android:id="@+id/back"
         android:orderInCategory="200"
-        android:title="@string/Layout"
+        android:title="Back"
         app:showAsAction="always"
         android:icon="@drawable/back"/>
 

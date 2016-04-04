@@ -3,6 +3,7 @@
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="icon_height_width">45dp</dimen>
 
     <!-- Standart dimens for the color wheel -->
     <dimen name="color_wheel_radius">124dp</dimen>
@@ -135,7 +136,6 @@
     <dimen name="padding_20">20dp</dimen>
     <dimen name="padding_25">25dp</dimen>
     <dimen name="padding_30">30dp</dimen>
-    <dimen name="fab_margin">16dp</dimen>
 
 
 </resources>

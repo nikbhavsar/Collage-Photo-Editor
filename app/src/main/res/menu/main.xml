@@ -11,19 +11,19 @@
     <item
         android:id="@+id/Layout"
         android:orderInCategory="200"
-        android:title="@string/Layout"
+        android:title="Layout"
         app:showAsAction="always"
         android:icon="@drawable/layout"/>
     <item
         android:id="@+id/Camera"
         android:orderInCategory="300"
-        android:title="@string/Camera"
+        android:title="Camera"
         app:showAsAction="always"
         android:icon="@drawable/camera"/>
     <item
         android:id="@+id/Gallary"
         android:orderInCategory="400"
-        android:title="@string/Gallery"
+        android:title="Gallery"
         android:icon="@drawable/gallary"
         app:showAsAction="always"/>
 

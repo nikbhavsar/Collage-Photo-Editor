@@ -12,12 +12,12 @@
         "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\layout\\select_dialog_multichoice_material.xml"
     },
     {
-        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_close_item_material.xml",
-        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\layout\\abc_action_mode_close_item_material.xml"
-    },
-    {
         "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_item_material.xml",
         "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\layout\\select_dialog_item_material.xml"
+    },
+    {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_close_item_material.xml",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\layout\\abc_action_mode_close_item_material.xml"
     },
     {
         "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_checkbox.xml",
@@ -26,6 +26,10 @@
     {
         "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item_header.xml",
         "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.2.0\\res\\layout\\design_navigation_item_header.xml"
+    },
+    {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_effect.xml",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\src\\main\\res\\layout\\activity_effect.xml"
     },
     {
         "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\layout\\support_simple_spinner_dropdown_item.xml",
@@ -66,10 +70,6 @@
     {
         "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view_list_item.xml",
         "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\layout\\abc_activity_chooser_view_list_item.xml"
-    },
-    {
-        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\layout\\content_custom_camera.xml",
-        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\src\\main\\res\\layout\\content_custom_camera.xml"
     },
     {
         "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_lines.xml",

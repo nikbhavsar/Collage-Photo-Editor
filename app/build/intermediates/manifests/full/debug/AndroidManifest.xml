@@ -25,7 +25,6 @@
 
     <uses-feature android:name="android.hardware.camera" />
 
-    <uses-permission android:name="android.permission.FLASHLIGHT" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -44,6 +43,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.example.nikhar.photoeditor.CustomCameraActivity"
+            android:screenOrientation="portrait" />
         <activity android:name="com.example.nikhar.photoeditor.CustomGalleryActivity" >
             <intent-filter>
                 <action android:name="luminous.ACTION_PICK" />
@@ -53,14 +55,14 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.nikhar.photoeditor.CustomCameraActivity"
-            android:screenOrientation="portrait" />
-        <activity
             android:name="com.example.nikhar.photoeditor.galary.RootActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name="com.example.nikhar.photoeditor.galary.ParentActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.nikhar.photoeditor.EffectActivity"
+            android:label="Effect Activity" />
     </application>
 
 </manifest>
