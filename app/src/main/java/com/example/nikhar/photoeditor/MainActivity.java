@@ -429,9 +429,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         String state = Environment.getExternalStorageState();
         if (Environment.MEDIA_MOUNTED.equals(state)) {
             fileDir = new File(Environment.getExternalStorageDirectory(),
-                    "OrangePhotobooth");
+                    "Collage Photo Editor");
         } else {
-            fileDir = new File(getFilesDir(), "OrangePhotobooth");
+            fileDir = new File(getFilesDir(), "Collage Photo Editor");
         }
         if (fileDir != null && !fileDir.exists()) {
             if (!fileDir.mkdir()) {

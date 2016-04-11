@@ -69,16 +69,20 @@ import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.nostra13.universalimageloader.core.assist.ImageScaleType;
 
-public class EffectActivity extends Activity implements View.OnClickListener
-         {
+public class EffectActivity extends Activity implements View.OnClickListener,
+        SaturationBar.OnSaturationChangedListener {
 
     private ImageView img_done;
-
+    private ImageView imgOrange;
+    private ImageView imgGreyScale;
+    private ImageView imgSepia;
+    private ImageView imgContrast;
     private ImageView imgBlackedgeburn;
     private ImageView imfWhiteedgeburn;
     private ImageView imgBrightness;
     private ImageView imgOrignal;
-
+    private ImageView imgFrameBlack;
+    private ImageView imgFrameWhite;
     private ImageView imgBack;
 
     private RelativeLayout rl_image_effect;
@@ -131,16 +135,26 @@ public class EffectActivity extends Activity implements View.OnClickListener
     }
 
     @Override
-
+    public void onSaturationChanged(int saturation) {
+        // saturationBar.setColor(alfa_value);
+        imgOrange.setColorFilter(saturation, PorterDuff.Mode.MULTIPLY);
+        alfa_saturation = saturation;
+        // alpha = tnt.getProgress();
+    }
 
     private void initComponent() {
 
-
+        imgOrange = (ImageView) findViewById(R.id.imgOrange);
+        imgGreyScale = (ImageView) findViewById(R.id.imgGreyScale);
+        imgSepia = (ImageView) findViewById(R.id.imgSepia);
+        imgContrast = (ImageView) findViewById(R.id.imgContrast);
         imgBlackedgeburn = (ImageView) findViewById(R.id.imgBlackedgeburn);
         imfWhiteedgeburn = (ImageView) findViewById(R.id.imfWhiteedgeburn);
         imgBrightness = (ImageView) findViewById(R.id.imgBrightness);
         imgOrignal = (ImageView) findViewById(R.id.imgOrignal);
 
+        imgFrameBlack = (ImageView) findViewById(R.id.imgFrameBlack);
+        imgFrameWhite = (ImageView) findViewById(R.id.imgFrameWhite);
         img_done = (ImageView) findViewById(R.id.img_done);
         imgBack = (ImageView) findViewById(R.id.img_back);
 
@@ -153,7 +167,9 @@ public class EffectActivity extends Activity implements View.OnClickListener
 
         titleTv = (TextView) findViewById(R.id.txt_header);
 
-
+        imgGreyScale.setOnClickListener(this);
+        imgSepia.setOnClickListener(this);
+        imgContrast.setOnClickListener(this);
         imgBlackedgeburn.setOnClickListener(this);
         imfWhiteedgeburn.setOnClickListener(this);
         imgBrightness.setOnClickListener(this);
@@ -173,7 +189,26 @@ public class EffectActivity extends Activity implements View.OnClickListener
         // BitmapFactory.decodeResource(getApplicationContext().getResources(),
         // R.drawable.myprofile_menu);
 
+        valueBar.setColor(Color.parseColor("#B45F04"));
+        valueBar.setOnValueChangedListener(new ValueBar.OnValueChangedListener() {
+            @Override
+            public void onValueChanged(int value) {
+                saturationBar.setColor(value);
+                alfa_value = value;
+                saturationBar
+                        .setOnSaturationChangedListener(new OnSaturationChangedListener() {
 
+                            @Override
+                            public void onSaturationChanged(int saturation) {
+                                // saturationBar.setColor(alfa_value);
+                                imgOrange.setColorFilter(saturation,
+                                        PorterDuff.Mode.MULTIPLY);
+                                alfa_saturation = saturation;
+                            }
+                        });
+                imgOrange.setColorFilter(value, PorterDuff.Mode.MULTIPLY);
+            }
+        });
 
 
 
@@ -187,23 +222,35 @@ public class EffectActivity extends Activity implements View.OnClickListener
     public void onClick(View v) {
 
         switch (v.getId()) {
+            case R.id.imgGreyScale:
+                imgOrange.setImageBitmap(ColorFilterEffectsLib
+                        .ConvertToBlackAndWhite(bmp));
+
+                break;
+            case R.id.imgSepia:
 
 
+
+                break;
             case R.id.imgContrast:
-
+                imgOrange.setImageBitmap(ColorFilterEffectsLib.adjustedContrast(
+                        bmp, 60));
 
                 break;
             case R.id.imgBlackedgeburn:
+                              break;
 
             case R.id.imfWhiteedgeburn:
 
+                break;
 
             case R.id.imgBrightness:
-
+                imgOrange.setImageBitmap(ColorFilterEffectsLib
+                        .doBrightness(bmp, 75));
                 break;
 
             case R.id.imgOrignal:
-
+                imgOrange.setImageBitmap(bmp);
                 break;
 
             case R.id.img_done:
@@ -219,6 +266,72 @@ public class EffectActivity extends Activity implements View.OnClickListener
 
     }
 
+    public Bitmap doWhiteEdgeBurn(Bitmap bmp_view) {
+        Bitmap bitmapOrg = BitmapFactory.decodeResource(getResources(),
+                R.drawable.random_overlay_white);
+
+        int width = bitmapOrg.getWidth();
+        int height = bitmapOrg.getHeight();
+        int newWidth = imgFrameWhite.getLayoutParams().height = bmp_view
+                .getHeight();
+        int newHeight = imgFrameWhite.getLayoutParams().width = bmp_view
+                .getWidth() + 5;
+
+        float scaleWidth = ((float) newWidth) / width;
+        float scaleHeight = ((float) newHeight) / height;
+
+        // createa matrix for the manipulation
+        Matrix matrix = new Matrix();
+
+        // resize the bit map
+        matrix.postScale(scaleHeight, scaleWidth);
+        // rotate the Bitmap
+
+        // recreate the new Bitmap
+        Bitmap resizedBitmap = Bitmap.createBitmap(bitmapOrg, 0, 0, width,
+                height, matrix, true);
+
+        Bitmap combineImages = ColorFilterEffectsLib.mergeImage_edgeburn(
+                bmp_view, resizedBitmap);
+        return combineImages;
+    }
+
+    public Bitmap doBlackEdgeBurn(Bitmap bmp_view) {
+
+        Bitmap bitmapOrg = BitmapFactory.decodeResource(getResources(),
+                R.drawable.random_overlay);
+
+        int width = bitmapOrg.getWidth();
+        int height = bitmapOrg.getHeight();
+        int newWidth = imgFrameBlack.getLayoutParams().height = bmp_view
+                .getHeight();
+        int newHeight = imgFrameBlack.getLayoutParams().width = bmp_view
+                .getWidth() + 5;
+
+        // calculate the scale - in this case = 0.f
+        float scaleWidth = ((float) newWidth) / width;
+        float scaleHeight = ((float) newHeight) / height;
+
+        // createa matrix for the manipulation
+        Matrix matrix = new Matrix();
+
+        // resize the bit map
+        matrix.postScale(scaleHeight, scaleWidth);
+        // rotate the Bitmap
+        Bitmap resizedBitmap = Bitmap.createBitmap(bitmapOrg, 0, 0, width,
+                height, matrix, true);
+
+        Bitmap combineImages = ColorFilterEffectsLib.mergeImage_edgeburn(
+                bmp_view, resizedBitmap);
+
+        return combineImages;
+    }
+
+    /****************************************************************************
+     *
+     * @purpose:This Method use to Call mSetImageAsyncTask
+     *
+     ***************************************************************************/
 
     private void setImage() {
 
@@ -292,7 +405,14 @@ public class EffectActivity extends Activity implements View.OnClickListener
 
 
 
-
+            imgGreyScale.setImageBitmap(ColorFilterEffectsLib
+                    .ConvertToBlackAndWhite(bmp));
+            imgBrightness.setImageBitmap(ColorFilterEffectsLib
+                    .doBrightness(bmp, 75));
+            imgSepia.setImageBitmap(ColorFilterEffectsLib
+                    .ConvertToSepia(bmp));
+            imgContrast.setImageBitmap(ColorFilterEffectsLib
+                    .adjustedContrast(bmp, 60));
 
         }
     }
