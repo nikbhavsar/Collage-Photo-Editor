@@ -638,7 +638,7 @@ public class CustomCameraActivity extends Activity implements
         if (vesion == 1) {
             Camera.open(which);
         } else {
-            camera = Camera.open();
+            camera = Camera.open(1);
         }
 
         setCameraDisplayOrientation(CustomCameraActivity.this,

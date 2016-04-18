@@ -240,7 +240,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     {
 
         img_done = (ImageView) findViewById(R.id.img_done);
-        img_thim= (ImageView) findViewById(R.id.img_thim);
+
 
         img_t1_1 = (ImageView) findViewById(R.id.img_t1_1);
 

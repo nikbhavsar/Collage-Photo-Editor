@@ -1,43 +1,16 @@
 package com.example.nikhar.photoeditor;
 
-import android.app.Activity;
-import android.app.ProgressDialog;
-import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.Color;
-import android.graphics.Matrix;
-import android.graphics.PorterDuff;
-import android.os.AsyncTask;
-import android.os.Bundle;
-import android.os.Environment;
-import android.util.Log;
-import android.view.View;
-import android.widget.ImageView;
-import android.widget.RelativeLayout;
-import android.widget.TextView;
-
-import com.nostra13.universalimageloader.cache.memory.impl.WeakMemoryCache;
-import com.nostra13.universalimageloader.core.DisplayImageOptions;
-import com.nostra13.universalimageloader.core.ImageLoader;
-import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
-import com.nostra13.universalimageloader.core.assist.ImageScaleType;
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 
 
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
+
 
 import android.app.Activity;
 import android.app.ProgressDialog;
@@ -51,15 +24,21 @@ import android.graphics.PorterDuff;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 import com.example.nikhar.photoeditor.comman.Constance;
+import com.example.nikhar.photoeditor.galary.CustomGallery;
 import com.example.nikhar.photoeditor.widgets.SaturationBar;
 import com.example.nikhar.photoeditor.widgets.SaturationBar.OnSaturationChangedListener;
 import com.example.nikhar.photoeditor.widgets.ValueBar;
@@ -69,7 +48,7 @@ import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.nostra13.universalimageloader.core.assist.ImageScaleType;
 
-public class EffectActivity extends Activity implements View.OnClickListener,
+public class EffectActivity extends AppCompatActivity implements OnClickListener,
         SaturationBar.OnSaturationChangedListener {
 
     private ImageView img_done;
@@ -95,6 +74,7 @@ public class EffectActivity extends Activity implements View.OnClickListener,
 
     private ImageLoader imageLoader;
 
+
     int alfa_saturation = 0;
     int alfa_value = 0;
     private SaturationBar saturationBar;
@@ -103,11 +83,15 @@ public class EffectActivity extends Activity implements View.OnClickListener,
     private setImageAsyncTask mSetImageAsyncTask;
     private ProgressDialog progress;
     private RelativeLayout rltabbar;
+    Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_effect);
+        toolbar = (android.support.v7.widget.Toolbar) findViewById(R.id.app_bar);
+        setSupportActionBar(toolbar);
+        toolbar.setTitle("Effect");
 
         Intent intent = getIntent();
 
@@ -116,7 +100,9 @@ public class EffectActivity extends Activity implements View.OnClickListener,
         }
 
         initComponent();
-        initImageLoader();
+
+
+           initImageLoader();
 
 
     }
@@ -156,7 +142,7 @@ public class EffectActivity extends Activity implements View.OnClickListener,
         imgFrameBlack = (ImageView) findViewById(R.id.imgFrameBlack);
         imgFrameWhite = (ImageView) findViewById(R.id.imgFrameWhite);
         img_done = (ImageView) findViewById(R.id.img_done);
-        imgBack = (ImageView) findViewById(R.id.img_back);
+
 
         saturationBar = (SaturationBar) findViewById(R.id.saturationbar);
         valueBar = (ValueBar) findViewById(R.id.valueBar);
@@ -165,7 +151,7 @@ public class EffectActivity extends Activity implements View.OnClickListener,
         rl_image_effect = (RelativeLayout) findViewById(R.id.rl_image_effect);
         rltabbar= (RelativeLayout) findViewById(R.id.rltabbar);
 
-        titleTv = (TextView) findViewById(R.id.txt_header);
+
 
         imgGreyScale.setOnClickListener(this);
         imgSepia.setOnClickListener(this);
@@ -174,10 +160,7 @@ public class EffectActivity extends Activity implements View.OnClickListener,
         imfWhiteedgeburn.setOnClickListener(this);
         imgBrightness.setOnClickListener(this);
         imgOrignal.setOnClickListener(this);
-        img_done.setOnClickListener(this);
-        imgBack.setOnClickListener(this);
 
-        titleTv.setText(getString(R.string.Add_color_Effect));
 
         if (path != null) {
 
@@ -215,6 +198,56 @@ public class EffectActivity extends Activity implements View.OnClickListener,
     }
 
     @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.effect, menu);
+
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        if (id == R.id.done) {
+
+                Bitmap bitmap = takeScreenshot();
+                saveBitmap(bitmap);
+                Intent intenEffect = new Intent(getApplicationContext(),SharingActivity.class);
+                intenEffect.putExtra(Constance.IMAGE_PATH, imagePath.toString());
+                startActivity(intenEffect);
+
+        }
+        if (id == R.id.back) {
+
+
+                imgOrange.clearColorFilter();
+                imgBlackedgeburn.clearColorFilter();
+                imfWhiteedgeburn.clearColorFilter();
+                imgOrignal.clearColorFilter();
+                imgGreyScale.clearColorFilter();
+                imgBrightness.clearColorFilter();
+                imgSepia.clearColorFilter();
+                imgContrast.clearColorFilter();
+
+
+                finish();
+
+
+
+
+        }
+
+
+        return super.onOptionsItemSelected(item);
+    }
+
+
+
+    @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
     }
 
@@ -229,7 +262,7 @@ public class EffectActivity extends Activity implements View.OnClickListener,
                 break;
             case R.id.imgSepia:
 
-
+                imgOrange.setImageBitmap(ColorFilterEffectsLib.ConvertToSepia(bmp));
 
                 break;
             case R.id.imgContrast:
@@ -238,10 +271,11 @@ public class EffectActivity extends Activity implements View.OnClickListener,
 
                 break;
             case R.id.imgBlackedgeburn:
-                              break;
+                imgOrange.setImageBitmap(doBlackEdgeBurn(bmp));
+                break;
 
             case R.id.imfWhiteedgeburn:
-
+                imgOrange.setImageBitmap(doWhiteEdgeBurn(bmp));
                 break;
 
             case R.id.imgBrightness:
@@ -252,13 +286,6 @@ public class EffectActivity extends Activity implements View.OnClickListener,
             case R.id.imgOrignal:
                 imgOrange.setImageBitmap(bmp);
                 break;
-
-            case R.id.img_done:
-
-
-                break;
-            case R.id.img_back:
-
 
             default:
                 break;
@@ -407,8 +434,8 @@ public class EffectActivity extends Activity implements View.OnClickListener,
 
             imgGreyScale.setImageBitmap(ColorFilterEffectsLib
                     .ConvertToBlackAndWhite(bmp));
-            imgBrightness.setImageBitmap(ColorFilterEffectsLib
-                    .doBrightness(bmp, 75));
+          imgBrightness.setImageBitmap(ColorFilterEffectsLib
+                  .doBrightness(bmp, 75));
             imgSepia.setImageBitmap(ColorFilterEffectsLib
                     .ConvertToSepia(bmp));
             imgContrast.setImageBitmap(ColorFilterEffectsLib
@@ -430,7 +457,7 @@ public class EffectActivity extends Activity implements View.OnClickListener,
         FileOutputStream fos;
         try {
             fos = new FileOutputStream(imagePath);
-            bitmap.compress(Bitmap.CompressFormat.PNG, 100, fos);
+            bitmap.compress(CompressFormat.PNG, 100, fos);
             fos.flush();
             fos.close();
 
@@ -463,6 +490,7 @@ public class EffectActivity extends Activity implements View.OnClickListener,
                 + "_photo" + ".jpg");// TODO check formate is ok?
         return file;
     }
+
 
 
 }

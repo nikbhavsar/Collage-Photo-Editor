@@ -1,5 +1,9 @@
 [
     {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\menu\\effect.xml",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\src\\main\\res\\menu\\effect.xml"
+    },
+    {
         "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\menu\\gallery.xml",
         "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\src\\main\\res\\menu\\gallery.xml"
     },

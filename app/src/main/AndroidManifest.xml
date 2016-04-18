@@ -18,6 +18,7 @@
     <uses-permission android:name="android.permission.CAMERA" />
 
     <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
 
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
@@ -29,8 +30,8 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
+        android:largeHeap="true"
         android:theme="@style/AppTheme">
-
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -57,8 +58,11 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".EffectActivity"
-            android:label="Effect Activity"
-            ></activity>
+            android:label="Effect Activity" />
+        <activity
+            android:name=".SharingActivity"
+            android:label="@string/title_activity_sharing"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>

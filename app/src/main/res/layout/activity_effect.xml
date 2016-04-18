@@ -20,73 +20,54 @@
 
     </RelativeLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="0.12"
-        android:orientation="vertical" >
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="5dp"
-            android:background="@android:color/white"
+            android:layout_weight="0.12"
             android:orientation="vertical" >
 
-            <ImageView
-                android:id="@+id/imgOrange"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:scaleType="fitXY" />
-        </LinearLayout>
-    </LinearLayout>
-
-    <RelativeLayout
-        android:id="@+id/rl_image_effect"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="0.44"
-        android:background="@color/maincolor"
-        android:orientation="horizontal" >
-
-        <HorizontalScrollView
-            android:id="@+id/scrollView21"
-            android:layout_width="fill_parent"
-            android:layout_height="60dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            >
-
-            <LinearLayout
-                android:id="@+id/ll_imageEffect"
-                android:layout_width="fill_parent"
-                android:layout_height="60dp"
-                android:layout_weight="0.80"
-                android:orientation="horizontal"
-                android:scrollbars="vertical" >
-
-
+                android:layout_margin="5dp"
+                android:background="@android:color/white"
+                android:orientation="vertical" >
 
                 <ImageView
-                    android:id="@+id/imgContrast"
-                    android:layout_width="60dp"
-                    android:layout_height="50dp"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp"
-                    android:layout_marginTop="5dp"
+                    android:id="@+id/imgOrange"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY" />
+            </LinearLayout>
+        </LinearLayout>
 
-                    android:src="@drawable/myprofile_menu" />
+        <RelativeLayout
+            android:id="@+id/rl_image_effect"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.44"
+            android:background="@color/maincolor"
+            android:orientation="horizontal" >
 
-                <RelativeLayout
-                    android:id="@+id/rlimfWhiteedgeburn"
-                    android:layout_width="60dp"
-                    android:layout_height="50dp"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp"
-                    android:layout_marginTop="5dp" >
+            <HorizontalScrollView
+                android:id="@+id/scrollView21"
+                android:layout_width="fill_parent"
+                android:layout_height="60dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                >
+
+                <LinearLayout
+                    android:id="@+id/ll_imageEffect"
+                    android:layout_width="fill_parent"
+                    android:layout_height="60dp"
+                    android:layout_weight="0.80"
+                    android:orientation="horizontal"
+                    android:scrollbars="vertical" >
 
                     <ImageView
-                        android:id="@+id/imfWhiteedgeburn"
+                        android:id="@+id/imgGreyScale"
                         android:layout_width="60dp"
                         android:layout_height="50dp"
                         android:layout_marginLeft="5dp"
@@ -95,105 +76,155 @@
 
                         android:src="@drawable/myprofile_menu" />
 
-
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:id="@+id/widget301"
-                    android:layout_width="60dp"
-                    android:layout_height="50dp"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp"
-                    android:layout_marginTop="5dp" >
-
                     <ImageView
-                        android:id="@+id/imgBlackedgeburn"
+                        android:id="@+id/imgSepia"
                         android:layout_width="60dp"
                         android:layout_height="50dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="5dp"
 
                         android:src="@drawable/myprofile_menu" />
 
+                    <ImageView
+                        android:id="@+id/imgContrast"
+                        android:layout_width="60dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="5dp"
 
-                </RelativeLayout>
+                        android:src="@drawable/myprofile_menu" />
 
-                <ImageView
-                    android:id="@+id/imgBrightness"
-                    android:layout_width="60dp"
-                    android:layout_height="50dp"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp"
-                    android:layout_marginTop="5dp"
+                    <RelativeLayout
+                        android:id="@+id/rlimfWhiteedgeburn"
+                        android:layout_width="60dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="5dp" >
 
-                    android:src="@drawable/myprofile_menu" />
+                        <ImageView
+                            android:id="@+id/imfWhiteedgeburn"
+                            android:layout_width="60dp"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginTop="5dp"
 
-                <ImageView
-                    android:id="@+id/imgOrignal"
-                    android:layout_width="60dp"
-                    android:layout_height="50dp"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp"
-                    android:layout_marginTop="5dp"
+                            android:src="@drawable/myprofile_menu" />
 
-                    android:src="@drawable/myprofile_menu" />
-            </LinearLayout>
-        </HorizontalScrollView>
-    </RelativeLayout>
+                        <ImageView
+                            android:id="@+id/imgFrameWhite"
+                            android:layout_width="60dp"
+                            android:layout_height="50dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/random_overlay_white" />
+                    </RelativeLayout>
 
-    <RelativeLayout
-        android:id="@+id/rl_color_effect"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="0.42"
+                    <RelativeLayout
+                        android:id="@+id/widget301"
+                        android:layout_width="60dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="5dp" >
 
-        android:orientation="horizontal"
-        android:visibility="gone" >
+                        <ImageView
+                            android:id="@+id/imgBlackedgeburn"
+                            android:layout_width="60dp"
+                            android:layout_height="50dp"
 
-        <TextView
-            android:id="@+id/noneTv"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_alignParentLeft="true"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="5dp"
-            android:background="@drawable/reload_01" />
+                            android:src="@drawable/myprofile_menu" />
 
-        <HorizontalScrollView
+                        <ImageView
+                            android:id="@+id/imgFrameBlack"
+                            android:layout_width="60dp"
+                            android:layout_height="50dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/random_overlay" />
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/imgBrightness"
+                        android:layout_width="60dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="5dp"
+
+                        android:src="@drawable/myprofile_menu" />
+
+                    <ImageView
+                        android:id="@+id/imgOrignal"
+                        android:layout_width="60dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="5dp"
+
+                        android:src="@drawable/myprofile_menu" />
+                </LinearLayout>
+            </HorizontalScrollView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_color_effect"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_centerVertical="true"
-            android:layout_toRightOf="@+id/noneTv"
-            android:padding="@dimen/dimen_five"
-            android:scrollbars="none" >
+            android:layout_weight="0.42"
 
-            <LinearLayout
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/noneTv"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/reload_01" />
+
+            <HorizontalScrollView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:gravity="center_vertical"
-                android:orientation="horizontal" >
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/noneTv"
+                android:padding="@dimen/dimen_five"
+                android:scrollbars="none" >
 
                 <LinearLayout
-                    android:id="@+id/colorSelectionView"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:visibility="visible" >
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
 
-                    <com.example.nikhar.photoeditor.widgets.ValueBar
-                        android:id="@+id/valueBar"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        colorBar:bar_thickness="5dp" />
+                    <LinearLayout
+                        android:id="@+id/colorSelectionView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:visibility="visible" >
 
-                    <com.example.nikhar.photoeditor.widgets.SaturationBar
-                        android:id="@+id/saturationbar"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        colorBar:bar_pointer_radius="10dp"
-                        colorBar:bar_thickness="2dp" />
+                        <com.example.nikhar.photoeditor.widgets.ValueBar
+                            android:id="@+id/valueBar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            colorBar:bar_thickness="5dp" />
+
+                        <com.example.nikhar.photoeditor.widgets.SaturationBar
+                            android:id="@+id/saturationbar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            colorBar:bar_pointer_radius="10dp"
+                            colorBar:bar_thickness="2dp" />
+                    </LinearLayout>
                 </LinearLayout>
-            </LinearLayout>
-        </HorizontalScrollView>
-    </RelativeLayout>
+            </HorizontalScrollView>
+        </RelativeLayout>
 
-</LinearLayout>
+    </LinearLayout>

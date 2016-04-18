@@ -256,6 +256,7 @@
     <dimen name="dimen_two">2dp</dimen>
     <item format="float" name="disabled_alpha_material_dark" type="dimen">0.30</item>
     <item format="float" name="disabled_alpha_material_light" type="dimen">0.26</item>
+    <dimen name="fab_margin">16dp</dimen>
     <dimen name="font_10sp">10sp</dimen>
     <dimen name="font_12sp">12sp</dimen>
     <dimen name="font_14sp">14sp</dimen>
@@ -419,6 +420,7 @@
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="teal">teal</string>
     <string name="thimName">thimname</string>
+    <string name="title_activity_sharing">SharingActivity</string>
     <string name="title_adjust_skin_tone">Adjust Skin</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
@@ -434,6 +436,8 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
     <style name="Base.AlertDialog.AppCompat" parent="android:Widget">
         <item name="android:layout">@layout/abc_alert_dialog_material</item>
         <item name="listLayout">@layout/abc_select_dialog_material</item>

@@ -44,12 +44,12 @@
         "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\abc_ic_ab_back_material.png"
     },
     {
-        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4\\abc_ic_menu_paste_material.png",
-        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\abc_ic_menu_paste_material.png"
-    },
-    {
         "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4\\abc_ic_star_black_16dp.png",
         "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable-xxxhdpi-v4\\abc_ic_star_black_16dp.png"
+    },
+    {
+        "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4\\abc_ic_menu_paste_material.png",
+        "source": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\abc_ic_menu_paste_material.png"
     },
     {
         "merged": "D:\\MyPhotoApp\\PhotoEditor\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4\\abc_ic_voice_search_api_material.png",

@@ -17,5 +17,6 @@
     <string name="perple">perple</string>
     <string name="red">red</string>
     <string name="teal">teal</string>
+    <string name="title_activity_sharing">SharingActivity</string>
 
 </resources>

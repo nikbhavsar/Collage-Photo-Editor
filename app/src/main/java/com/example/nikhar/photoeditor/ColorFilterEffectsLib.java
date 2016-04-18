@@ -1,5 +1,11 @@
 package com.example.nikhar.photoeditor;
 
+import java.io.FileNotFoundException;
+
+
+
+import java.io.FileNotFoundException;
+
 import android.app.Activity;
 import android.graphics.Bitmap;
 import android.graphics.Bitmap.Config;
@@ -11,12 +17,10 @@ import android.graphics.ColorMatrixColorFilter;
 import android.graphics.Paint;
 import android.net.Uri;
 
-import java.io.FileNotFoundException;
-
 public class ColorFilterEffectsLib extends Activity
 {
 
-	public Bitmap decodeUri(Uri selectedImage) throws FileNotFoundException
+	public  Bitmap decodeUri(Uri selectedImage) throws FileNotFoundException
 	{
 		// Decode image size
 		BitmapFactory.Options o = new BitmapFactory.Options();
@@ -75,10 +79,10 @@ public class ColorFilterEffectsLib extends Activity
 
 		Bitmap mBitmap = Bitmap.createBitmap(base.getWidth(), base.getHeight(), Config.ARGB_8888);
 		Canvas canvas = new Canvas(mBitmap);
-		Bitmap scaled = Bitmap.createScaledBitmap(base, overlay.getWidth(), overlay.getHeight(), true);
-		Bitmap overlay1 = Bitmap.createScaledBitmap(overlay, overlay.getWidth(), overlay.getHeight(), true);
+		Bitmap scaled = Bitmap.createScaledBitmap(base, overlay.getWidth(),overlay.getHeight(), true);
+		Bitmap overlay1 = Bitmap.createScaledBitmap(overlay, overlay.getWidth(),overlay.getHeight(), true);
 		canvas.drawBitmap(scaled, 0, 0, null);
-	    
+
 	    /*canvas.drawBitmap(scaled, 0,scaled.getHeight(), null);
 	    canvas.drawBitmap(scaled, scaled.getWidth(),0, null);*/
 		canvas.drawBitmap(overlay1,0,0, null);
@@ -91,19 +95,14 @@ public class ColorFilterEffectsLib extends Activity
 /*	    int adWDelta = (int)(bm1.getWidth() - overlay.getWidth()) ;
 	    int adHDelta = (int)(bm1.getHeight() - overlay.getHeight());
 */
-		Bitmap mBitmap = Bitmap.createBitmap(bm_tmp.getWidth(), bm_tmp.getHeight(), Config.ARGB_8888);
+		Bitmap mBitmap = Bitmap.createBitmap(bm_tmp.getWidth(),bm_tmp.getHeight(), Config.ARGB_8888);
 		Canvas canvas = new Canvas(mBitmap);
 
-		Bitmap scaled = Bitmap.createScaledBitmap(bm1, bm_tmp.getWidth() / 2, 2 * (bm_tmp.getWidth() / 5), true);
-		Bitmap overlay1 = Bitmap.createScaledBitmap(bm2, bm_tmp.getWidth() / 2, 2 * (bm_tmp.getWidth() / 5), true);
-		Bitmap overlay2 = Bitmap.createScaledBitmap(bm3, bm_tmp.getWidth() / 2, 2 * (bm_tmp.getWidth() / 5), true);
-		Bitmap overlay3 = Bitmap.createScaledBitmap(bm4, bm_tmp.getWidth() / 2, 2 * (bm_tmp.getWidth() / 5), true);
-	    
-	    
-	    /*Bitmap scaled = Bitmap.createScaledBitmap(bm1, 150,150, true);
-	    Bitmap overlay1 = Bitmap.createScaledBitmap(bm2,150,150, true);
-	    Bitmap overlay2 = Bitmap.createScaledBitmap(bm3,150,150, true);
-	    Bitmap overlay3 = Bitmap.createScaledBitmap(bm4,150,150, true);*/
+		Bitmap scaled = Bitmap.createScaledBitmap(bm1,bm_tmp.getWidth()/2,2*(bm_tmp.getWidth()/5), true);
+		Bitmap overlay1 = Bitmap.createScaledBitmap(bm2,bm_tmp.getWidth()/2,2*(bm_tmp.getWidth()/5), true);
+		Bitmap overlay2 = Bitmap.createScaledBitmap(bm3,bm_tmp.getWidth()/2,2*(bm_tmp.getWidth()/5), true);
+		Bitmap overlay3 = Bitmap.createScaledBitmap(bm4,bm_tmp.getWidth()/2,2*(bm_tmp.getWidth()/5), true);
+
 		canvas.drawBitmap(bm_tmp,0,0, null);
 		canvas.drawBitmap(scaled,0,5, null);
 
@@ -119,10 +118,10 @@ public class ColorFilterEffectsLib extends Activity
 /*	    int adWDelta = (int)(bm1.getWidth() - overlay.getWidth()) ;
 	    int adHDelta = (int)(bm1.getHeight() - overlay.getHeight());
 */
-		Bitmap mBitmap = Bitmap.createBitmap(bm_tmp.getWidth(), bm_tmp.getHeight(), Config.ARGB_8888);
+		Bitmap mBitmap = Bitmap.createBitmap(bm_tmp.getWidth(),bm_tmp.getHeight(), Config.ARGB_8888);
 		Canvas canvas = new Canvas(mBitmap);
-		Bitmap scaled = Bitmap.createScaledBitmap(bm1, bm_tmp.getWidth() / 2, 4 * (bm_tmp.getWidth() / 5), true);
-		Bitmap overlay1 = Bitmap.createScaledBitmap(bm2, bm_tmp.getWidth() / 2, 4 * (bm_tmp.getWidth() / 5), true);
+		Bitmap scaled = Bitmap.createScaledBitmap(bm1,bm_tmp.getWidth()/2,4*(bm_tmp.getWidth()/5), true);
+		Bitmap overlay1 = Bitmap.createScaledBitmap(bm2,bm_tmp.getWidth()/2,4*(bm_tmp.getWidth()/5), true);
 		canvas.drawBitmap(bm_tmp,0,0, null);
 		canvas.drawBitmap(scaled,bm_tmp.getWidth()/2,5, null);
 
@@ -136,9 +135,9 @@ public class ColorFilterEffectsLib extends Activity
 /*	    int adWDelta = (int)(bm1.getWidth() - overlay.getWidth()) ;
 	    int adHDelta = (int)(bm1.getHeight() - overlay.getHeight());
 */
-		Bitmap mBitmap = Bitmap.createBitmap(bm_tmp.getWidth(), bm_tmp.getHeight(), Config.ARGB_8888);
+		Bitmap mBitmap = Bitmap.createBitmap(bm_tmp.getWidth(),bm_tmp.getHeight(), Config.ARGB_8888);
 		Canvas canvas = new Canvas(mBitmap);
-		Bitmap scaled = Bitmap.createScaledBitmap(bm1, bm_tmp.getWidth() - 40, bm_tmp.getHeight() / 2, true);
+		Bitmap scaled = Bitmap.createScaledBitmap(bm1, bm_tmp.getWidth()-40,bm_tmp.getHeight()/2, true);
 		canvas.drawBitmap(bm_tmp,0,0, null);
 		canvas.drawBitmap(scaled,30,30, null);
 
@@ -150,33 +149,19 @@ public class ColorFilterEffectsLib extends Activity
 /*	    int adWDelta = (int)(bm1.getWidth() - overlay.getWidth()) ;
 	    int adHDelta = (int)(bm1.getHeight() - overlay.getHeight());
 */
-		Bitmap mBitmap = Bitmap.createBitmap(bm_tmp.getWidth(), bm_tmp.getHeight(), Config.ARGB_8888);
+		Bitmap mBitmap = Bitmap.createBitmap(bm_tmp.getWidth(),bm_tmp.getHeight(), Config.ARGB_8888);
 		Canvas canvas = new Canvas(mBitmap);
-	   /* Bitmap scaled = Bitmap.createScaledBitmap(bm1, 140,140, true);
-	    Bitmap overlay1 = Bitmap.createScaledBitmap(bm2,140,140, true);
-	    Bitmap overlay2 = Bitmap.createScaledBitmap(bm3,140,140, true);
-	    Bitmap overlay3 = Bitmap.createScaledBitmap(bm4,140,140, true);
-	    Bitmap overlay4 = Bitmap.createScaledBitmap(bm5,140,140, true);
-	    Bitmap overlay5 = Bitmap.createScaledBitmap(bm6,140,140, true);*/
 
-		Bitmap scaled = Bitmap.createScaledBitmap(bm1, bm_tmp.getWidth() / 3, 1 * (bm_tmp.getWidth() / 3), true);
-		Bitmap overlay1 = Bitmap.createScaledBitmap(bm2, bm_tmp.getWidth() / 3, 1 * (bm_tmp.getWidth() / 3), true);
-		Bitmap overlay2 = Bitmap.createScaledBitmap(bm3, bm_tmp.getWidth() / 3, 1 * (bm_tmp.getWidth() / 3), true);
-		Bitmap overlay3 = Bitmap.createScaledBitmap(bm4, bm_tmp.getWidth() / 3, 1 * (bm_tmp.getWidth() / 3), true);
-		Bitmap overlay4 = Bitmap.createScaledBitmap(bm5, bm_tmp.getWidth() / 3, 1 * (bm_tmp.getWidth() / 3), true);
-		Bitmap overlay5 = Bitmap.createScaledBitmap(bm6, bm_tmp.getWidth() / 3, 1 * (bm_tmp.getWidth() / 3), true);
+		Bitmap scaled = Bitmap.createScaledBitmap(bm1,bm_tmp.getWidth()/3,1*(bm_tmp.getWidth()/3), true);
+		Bitmap overlay1 = Bitmap.createScaledBitmap(bm2,bm_tmp.getWidth()/3,1*(bm_tmp.getWidth()/3), true);
+		Bitmap overlay2 = Bitmap.createScaledBitmap(bm3,bm_tmp.getWidth()/3,1*(bm_tmp.getWidth()/3), true);
+		Bitmap overlay3 = Bitmap.createScaledBitmap(bm4,bm_tmp.getWidth()/3,1*(bm_tmp.getWidth()/3), true);
+		Bitmap overlay4 = Bitmap.createScaledBitmap(bm5,bm_tmp.getWidth()/3,1*(bm_tmp.getWidth()/3), true);
+		Bitmap overlay5 = Bitmap.createScaledBitmap(bm6,bm_tmp.getWidth()/3,1*(bm_tmp.getWidth()/3), true);
 
-		Bitmap overlay6 = Bitmap.createScaledBitmap(bm7, bm_tmp.getWidth() / 3, 1 * (bm_tmp.getWidth() / 3), true);
-		Bitmap overlay7 = Bitmap.createScaledBitmap(bm8, bm_tmp.getWidth() / 3, 1 * (bm_tmp.getWidth() / 3), true);
-	    
-	   /* canvas.drawBitmap(bm_tmp,0,0, null);
-	    canvas.drawBitmap(scaled,bm_tmp.getWidth()/6,30, null);
-	    
-	    canvas.drawBitmap(overlay1, bm_tmp.getWidth()/6+200,35, null);
-	    canvas.drawBitmap(overlay2, bm_tmp.getWidth()/6,35+160, null);
-	    canvas.drawBitmap(overlay3,bm_tmp.getWidth()/6+200,35+160, null);
-	    canvas.drawBitmap(overlay4, bm_tmp.getWidth()/6,35+320, null);
-	    canvas.drawBitmap(overlay5, bm_tmp.getWidth()/6+200,35+320, null);*/
+		Bitmap overlay6 = Bitmap.createScaledBitmap(bm7,bm_tmp.getWidth()/3,1*(bm_tmp.getWidth()/3), true);
+		Bitmap overlay7 = Bitmap.createScaledBitmap(bm8,bm_tmp.getWidth()/3,1*(bm_tmp.getWidth()/3), true);
+
 
 		canvas.drawBitmap(bm_tmp,0,0, null);
 		canvas.drawBitmap(scaled,15,20, null);
@@ -195,15 +180,15 @@ public class ColorFilterEffectsLib extends Activity
 	public static Bitmap mergeImage_template6(Bitmap bm_tmp,Bitmap bm1, Bitmap bm2,Bitmap bm3, Bitmap bm4,Bitmap bm5, Bitmap bm6)
 	{
 
-		Bitmap mBitmap = Bitmap.createBitmap(bm_tmp.getWidth(), bm_tmp.getHeight(), Config.ARGB_8888);
+		Bitmap mBitmap = Bitmap.createBitmap(bm_tmp.getWidth(),bm_tmp.getHeight(), Config.ARGB_8888);
 		Canvas canvas = new Canvas(mBitmap);
 
-		Bitmap scaled   = Bitmap.createScaledBitmap(bm1, 20 + (bm_tmp.getWidth() / 3), 20 + (bm_tmp.getWidth() / 3), true);
-		Bitmap overlay1 = Bitmap.createScaledBitmap(bm2, 20 + (bm_tmp.getWidth() / 3), 20 + (bm_tmp.getWidth() / 3), true);
-		Bitmap overlay2 = Bitmap.createScaledBitmap(bm3, 20 + (bm_tmp.getWidth() / 3), 20 + (bm_tmp.getWidth() / 3), true);
-		Bitmap overlay3 = Bitmap.createScaledBitmap(bm4, 20 + (bm_tmp.getWidth() / 3), 20 + (bm_tmp.getWidth() / 3), true);
-		Bitmap overlay4 = Bitmap.createScaledBitmap(bm5, 20 + (bm_tmp.getWidth() / 3), 20 + (bm_tmp.getWidth() / 3), true);
-		Bitmap overlay5 = Bitmap.createScaledBitmap(bm6, 20 + (bm_tmp.getWidth() / 3), 20 + (bm_tmp.getWidth() / 3), true);
+		Bitmap scaled   = Bitmap.createScaledBitmap(bm1,20+(bm_tmp.getWidth()/3),20+(bm_tmp.getWidth()/3), true);
+		Bitmap overlay1 = Bitmap.createScaledBitmap(bm2,20+(bm_tmp.getWidth()/3),20+(bm_tmp.getWidth()/3), true);
+		Bitmap overlay2 = Bitmap.createScaledBitmap(bm3,20+(bm_tmp.getWidth()/3),20+(bm_tmp.getWidth()/3), true);
+		Bitmap overlay3 = Bitmap.createScaledBitmap(bm4,20+(bm_tmp.getWidth()/3),20+(bm_tmp.getWidth()/3), true);
+		Bitmap overlay4 = Bitmap.createScaledBitmap(bm5,20+(bm_tmp.getWidth()/3),20+(bm_tmp.getWidth()/3), true);
+		Bitmap overlay5 = Bitmap.createScaledBitmap(bm6,20+(bm_tmp.getWidth()/3),20+(bm_tmp.getWidth()/3), true);
 
 
 		canvas.drawBitmap(bm_tmp,0,0, null);
@@ -225,12 +210,12 @@ public class ColorFilterEffectsLib extends Activity
 /*	    int adWDelta = (int)(bm1.getWidth() - overlay.getWidth()) ;
 	    int adHDelta = (int)(bm1.getHeight() - overlay.getHeight());
 */
-		Bitmap mBitmap = Bitmap.createBitmap(200, 200, Config.ARGB_8888);
+		Bitmap mBitmap = Bitmap.createBitmap(200,200, Config.ARGB_8888);
 		Canvas canvas = new Canvas(mBitmap);
-		Bitmap scaled = Bitmap.createScaledBitmap(bm1, 100, 100, true);
-		Bitmap overlay1 = Bitmap.createScaledBitmap(bm2, 100, 100, true);
-		Bitmap overlay2 = Bitmap.createScaledBitmap(bm3, 100, 100, true);
-		Bitmap overlay3 = Bitmap.createScaledBitmap(bm4, 100, 100, true);
+		Bitmap scaled = Bitmap.createScaledBitmap(bm1, 100,100, true);
+		Bitmap overlay1 = Bitmap.createScaledBitmap(bm2,100,100, true);
+		Bitmap overlay2 = Bitmap.createScaledBitmap(bm3,100,100, true);
+		Bitmap overlay3 = Bitmap.createScaledBitmap(bm4,100,100, true);
 		canvas.drawBitmap(scaled, 0, 0, null);
 
 		canvas.drawBitmap(overlay1, 0,scaled.getHeight(), null);
@@ -246,14 +231,14 @@ public class ColorFilterEffectsLib extends Activity
 	    int adHDelta = (int)(bm1.getHeight() - overlay.getHeight());
 */
 
-		Bitmap mBitmap = Bitmap.createBitmap(300, 400, Config.ARGB_8888);
+		Bitmap mBitmap = Bitmap.createBitmap(300,400, Config.ARGB_8888);
 		Canvas canvas = new Canvas(mBitmap);
-		Bitmap scaled = Bitmap.createScaledBitmap(bm1, 150, 133, true);
-		Bitmap overlay1 = Bitmap.createScaledBitmap(bm2, 150, 133, true);
-		Bitmap overlay2 = Bitmap.createScaledBitmap(bm3, 150, 133, true);
-		Bitmap overlay3 = Bitmap.createScaledBitmap(bm4, 150, 133, true);
-		Bitmap overlay4 = Bitmap.createScaledBitmap(bm5, 150, 133, true);
-		Bitmap overlay5 = Bitmap.createScaledBitmap(bm6, 150, 133, true);
+		Bitmap scaled = Bitmap.createScaledBitmap(bm1, 150,133, true);
+		Bitmap overlay1 = Bitmap.createScaledBitmap(bm2,150,133, true);
+		Bitmap overlay2 = Bitmap.createScaledBitmap(bm3,150,133, true);
+		Bitmap overlay3 = Bitmap.createScaledBitmap(bm4,150,133, true);
+		Bitmap overlay4 = Bitmap.createScaledBitmap(bm5,150,133, true);
+		Bitmap overlay5 = Bitmap.createScaledBitmap(bm6,150,133, true);
 		canvas.drawBitmap(scaled, 0,0, null);
 		canvas.drawBitmap(overlay1,scaled.getWidth(),0, null);
 		canvas.drawBitmap(overlay2,0,scaled.getHeight(), null);
@@ -272,14 +257,15 @@ public class ColorFilterEffectsLib extends Activity
 */
 		Bitmap mBitmap = Bitmap.createBitmap(bm1.getWidth(), bm1.getHeight(), Config.ARGB_8888);
 		Canvas canvas = new Canvas(mBitmap);
-		Bitmap scaled = Bitmap.createScaledBitmap(bm1, bm2.getWidth() / 2, bm2.getHeight() / 2, true);
-		Bitmap overlay1 = Bitmap.createScaledBitmap(bm2, bm2.getWidth() / 2, bm2.getHeight() / 2, true);
+		Bitmap scaled = Bitmap.createScaledBitmap(bm1, bm2.getWidth()/2,bm2.getHeight()/2, true);
+		Bitmap overlay1 = Bitmap.createScaledBitmap(bm2, bm2.getWidth()/2,bm2.getHeight()/2, true);
 		canvas.drawBitmap(scaled, 0, 0, null);
 
 		canvas.drawBitmap(overlay1, 0,scaled.getHeight(), null);
 
 		return mBitmap;
 	}
+
 
 	public static Bitmap invert(Bitmap src) {
 		Bitmap output = Bitmap.createBitmap(src.getWidth(), src.getHeight(), src.getConfig());
@@ -293,9 +279,9 @@ public class ColorFilterEffectsLib extends Activity
 				pixelColor = src.getPixel(x, y);
 				A = Color.alpha(pixelColor);
 
-				R = Color.red(pixelColor)+52;
-				G = Color.green(pixelColor)+40;
-				B = Color.blue(pixelColor)+90;
+				R =Color.red(pixelColor)+52;
+				G =Color.green(pixelColor)+40;
+				B =Color.blue(pixelColor)+90;
 
 				output.setPixel(x, y, Color.argb(A, R, G, B));
 			}
@@ -404,7 +390,16 @@ public class ColorFilterEffectsLib extends Activity
 
 
 	public static Bitmap ConvertToNegative(Bitmap sampleBitmap){
-		
+		ColorMatrix negativeMatrix =new ColorMatrix();
+		float[] negMat={-1, 0, 0, 0, 255, 0, -1, 0, 0, 255, 0, 0, -1, 0, 255, 0, 0, 0, 1, 0 };
+		negativeMatrix.set(negMat);
+		final ColorMatrixColorFilter colorFilter= new ColorMatrixColorFilter(negativeMatrix);
+		Bitmap rBitmap = sampleBitmap.copy(Bitmap.Config.ARGB_8888, true);
+		Paint paint=new Paint();
+		paint.setColorFilter(colorFilter);
+		Canvas myCanvas =new Canvas(rBitmap);
+		myCanvas.drawBitmap(rBitmap, 0, 0, paint);
+		return rBitmap;
 	}
 
 
@@ -412,7 +407,7 @@ public class ColorFilterEffectsLib extends Activity
 		ColorMatrix bwMatrix =new ColorMatrix();
 		bwMatrix.setSaturation(0);
 		final ColorMatrixColorFilter colorFilter= new ColorMatrixColorFilter(bwMatrix);
-		Bitmap rBitmap = sampleBitmap.copy(Config.ARGB_8888, true);
+		Bitmap rBitmap = sampleBitmap.copy(Bitmap.Config.ARGB_8888, true);
 		Paint paint=new Paint();
 		paint.setColorFilter(colorFilter);
 		Canvas myCanvas =new Canvas(rBitmap);
@@ -422,12 +417,18 @@ public class ColorFilterEffectsLib extends Activity
 
 
 	public static Bitmap ConvertToSepia(Bitmap sampleBitmap){
-
+		ColorMatrix sepiaMatrix =new ColorMatrix();
+		float[] sepMat={0.3930000066757202f, 0.7689999938011169f, 0.1889999955892563f, 0, 0, 0.3490000069141388f, 0.6859999895095825f, 0.1679999977350235f, 0, 0, 0.2720000147819519f, 0.5339999794960022f, 0.1309999972581863f, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1};
+		sepiaMatrix.set(sepMat);
+		final ColorMatrixColorFilter colorFilter= new ColorMatrixColorFilter(sepiaMatrix);
+		Bitmap rBitmap = sampleBitmap.copy(Bitmap.Config.ARGB_8888, true);
+		Paint paint=new Paint();
+		paint.setColorFilter(colorFilter);
+		Canvas myCanvas =new Canvas(rBitmap);
+		myCanvas.drawBitmap(rBitmap, 0, 0, paint);
+		return rBitmap;
 	}
 
 
 }
-
-
-
 
