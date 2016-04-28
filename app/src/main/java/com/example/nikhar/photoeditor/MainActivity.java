@@ -457,7 +457,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         ImageLoaderConfiguration config = builder.build();
         imageLoader = ImageLoader.getInstance();
-        imageLoader.init(config);
+        imageLoader.init(ImageLoaderConfiguration.createDefault(this));
     }
 
 
@@ -593,17 +593,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
 
-    /****************************************************************************
-     * mSetImageAsyncTask
-     *
-     * @CreatedDate:
-     * @ModifiedBy: not yet
-     * @ModifiedDate: not yet
-     * @purpose:This Class Use to Create GlcCard With Perameter And Return
-     *               UserId
-     *
-     ***************************************************************************/
-
     private class setImageCameraAsyncTask extends AsyncTask<Void, Void, Void> {
 
         @Override
@@ -636,7 +625,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
 
-                // Return multiple path string array path
+
 
                 for (int i = 0; i < CameraArry.size(); i++) {
 
@@ -646,12 +635,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         Log.e("", "Path==" + CameraArry.get(i).toString());
 
                         String path = CameraArry.get(i).toString();
-						/*Bitmap bmp = BitmapFactory.decodeFile(path);
-						bmp = rotateImageIfRequired(getApplicationContext(), bmp,
-								Uri.fromFile(new File(path)));
-						img_t1_1.setImageBitmap(bmp);*/
-
-                        imageLoader.displayImage("file://" +path, img_t1_1);
+			             imageLoader.displayImage("file://" +path, img_t1_1);
 
                     }
                     else if (checkTemplateNum == 2)
@@ -717,9 +701,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     {
 
                         String path = CameraArry.get(i).toString();
-						/*Bitmap bmp = BitmapFactory.decodeFile(path);
-						bmp = rotateImageIfRequired(getApplicationContext(), bmp,
-								Uri.fromFile(new File(path)));*/
 
                         if (i == 0) {
                             //img_t5_1.setImageBitmap(bmp);
@@ -743,9 +724,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     else if (checkTemplateNum == 6) {
 
                         String path = CameraArry.get(i).toString();
-						/*Bitmap bmp = BitmapFactory.decodeFile(path);
-						bmp = rotateImageIfRequired(getApplicationContext(), bmp,
-								Uri.fromFile(new File(path)));*/
 
                         if (i == 0) {
                             //img_t6_1.setImageBitmap(bmp);
@@ -776,17 +754,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         }
     }
-
-    /****************************************************************************
-     * mSetImageAsyncTask
-     *
-     * @CreatedDate:
-     * @ModifiedBy: not yet
-     * @ModifiedDate: not yet
-     * @purpose:This Class Use to Create GlcCard With Perameter And Return
-     *               UserId
-     *
-     ***************************************************************************/
 
     private class setImageAsyncTask extends AsyncTask<Void, Void, Void> {
 
@@ -826,12 +793,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                         CustomGallery item = new CustomGallery();
                         item.sdcardPath = string;
-                        //Bitmap bmp = BitmapFactory.decodeFile(item.sdcardPath);
-                        //bmp = rotateImageIfRequired(getApplicationContext(), bmp,Uri.fromFile(new File(item.sdcardPath)));
-                        //ByteArrayOutputStream bos = new ByteArrayOutputStream();
-
-                        //bmp.compress(CompressFormat.JPEG, 70, bos);
-                        //img_t1_1.setImageBitmap(bmp);
 
                         imageLoader.displayImage("file://" +item.sdcardPath, img_t1_1);
 
@@ -846,11 +807,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                         CustomGallery item = new CustomGallery();
                         item.sdcardPath = string;
-//						Bitmap bmp = BitmapFactory.decodeFile(item.sdcardPath);
 //
-//						ByteArrayOutputStream bos = new ByteArrayOutputStream();
-//						bmp.compress(CompressFormat.JPEG, 70, bos);
-
                         if (i == 1) {
                             //img_t2_1.setImageBitmap(bmp);
                             imageLoader.displayImage("file://" +item.sdcardPath, img_t2_1);
@@ -873,11 +830,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                         CustomGallery item = new CustomGallery();
                         item.sdcardPath = string;
-						/*Bitmap bmp = BitmapFactory.decodeFile(item.sdcardPath);
 
-						ByteArrayOutputStream bos = new ByteArrayOutputStream();
-						bmp.compress(CompressFormat.JPEG, 70, bos);
-*/
                         if (i == 1) {
                             //img_t3_1.setImageBitmap(bmp);
                             imageLoader.displayImage("file://" +item.sdcardPath, img_t3_1);
@@ -903,10 +856,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                         CustomGallery item = new CustomGallery();
                         item.sdcardPath = string;
-                        //Bitmap bmp = BitmapFactory.decodeFile(item.sdcardPath);
-
-                        //ByteArrayOutputStream bos = new ByteArrayOutputStream();
-                        //bmp.compress(CompressFormat.JPEG, 70, bos);
 
                         if (i == 1) {
                             //img_t4_1.setImageBitmap(bmp);
@@ -944,10 +893,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                         CustomGallery item = new CustomGallery();
                         item.sdcardPath = string;
-						/*Bitmap bmp = BitmapFactory.decodeFile(item.sdcardPath);
-
-						ByteArrayOutputStream bos = new ByteArrayOutputStream();
-						bmp.compress(CompressFormat.JPEG, 70, bos);*/
 
                         if (i == 1) {
                             //img_t5_1.setImageBitmap(bmp);
@@ -979,9 +924,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                         CustomGallery item = new CustomGallery();
                         item.sdcardPath = string;
-						/*Bitmap bmp = BitmapFactory.decodeFile(item.sdcardPath);
-						ByteArrayOutputStream bos = new ByteArrayOutputStream();
-						bmp.compress(CompressFormat.JPEG, 70, bos);*/
+
 
                         if (i == 1) {
                             //img_t6_1.setImageBitmap(bmp);

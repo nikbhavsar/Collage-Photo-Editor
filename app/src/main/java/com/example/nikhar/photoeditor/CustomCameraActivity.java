@@ -91,7 +91,7 @@ public class CustomCameraActivity extends Activity implements
 
         rl = (RelativeLayout) findViewById(R.id.rl);
 
-        // Toast.makeText(getApplicationContext(),rl.getTag().toString(),Toast.LENGTH_LONG).show();
+
         hasFlash = getPackageManager().hasSystemFeature(
                 PackageManager.FEATURE_CAMERA_FLASH);
         getWindow().setFormat(PixelFormat.UNKNOWN);
@@ -158,31 +158,14 @@ public class CustomCameraActivity extends Activity implements
         timerUpdateHandler = new Handler();
         timer = new Timer();
 
-		/*
-		 * Button retake=(Button)findViewById(R.id.retake); Button
-		 * use=(Button)findViewById(R.id.Use); Button
-		 * back=(Button)findViewById(R.id.back); Button
-		 * home=(Button)findViewById(R.id.home);
-		 */
+
 
         ibRetake.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
-                // Toast.makeText(getApplicationContext(),rl.getTag().toString(),Toast.LENGTH_LONG).show();
 
-                // Deleting the image from the SD card/
                 File discardedPhoto = new File(sdRoot, dir + fileName);
                 discardedPhoto.delete();
-				/*
-				 * ibCapture.setVisibility(View.VISIBLE); // Restart the camera
-				 * preview. camera.startPreview();
-				 * 
-				 * // Reorganize the buttons on the screen
-				 * wheelview.setVisibility(View.VISIBLE);
-				 * ibRetake.setVisibility(View.GONE);
-				 * ibUse.setVisibility(View.GONE);
-				 */
-                // camera.stopPreview();
-                // camera.release();
+
 
                 getSharedPreferences("SavedImages", MODE_WORLD_WRITEABLE)
                         .edit().clear().commit();
@@ -195,12 +178,12 @@ public class CustomCameraActivity extends Activity implements
                 ibRetake.setVisibility(View.GONE);
                 ibUse.setVisibility(View.GONE);
                 camera.startPreview();
-                // timer();
+
 
             }
         });
 
-        // Add a listener to the Use button
+
         ibUse.setOnClickListener(new OnClickListener() {
             public void onClick(View v)
             {
@@ -213,35 +196,7 @@ public class CustomCameraActivity extends Activity implements
             }
         });
 
-		/*
-		 * home.setOnClickListener(new View.OnClickListener() {
-		 * 
-		 * @Override public void onClick(View v) { // TODO Auto-generated method
-		 * stub
-		 * 
-		 * } }); back.setOnClickListener(new View.OnClickListener() {
-		 * 
-		 * @Override public void onClick(View v) { // TODO Auto-generated method
-		 * stub finish(); } }); use.setOnClickListener(new
-		 * View.OnClickListener() {
-		 * 
-		 * @Override public void onClick(View v) { // TODO Auto-generated method
-		 * stub if(flag>=1) { startActivity(new
-		 * Intent(CustomCameraActivity.this,Captured.class)); } else {
-		 * AlertDialog.Builder ab1=new
-		 * AlertDialog.Builder(CustomCameraActivity.this);
-		 * ab1.setMessage("Please Capture Image"); ab1.setCancelable(false);
-		 * ab1.setPositiveButton("ok", new DialogInterface.OnClickListener() {
-		 * 
-		 * @Override public void onClick(DialogInterface dialog, int which) { //
-		 * TODO Auto-generated method stub
-		 * 
-		 * } }).show(); } flag=0; } }); retake.setOnClickListener(new
-		 * View.OnClickListener() {
-		 * 
-		 * @Override public void onClick(View v) { // TODO Auto-generated method
-		 * stub camera.startPreview(); flag=0; } });
-		 */
+
 
         cap_btn.setOnClickListener(new OnClickListener() {
 
@@ -279,14 +234,7 @@ public class CustomCameraActivity extends Activity implements
                         frontCamera = false;
                         break;
                 }
-				/*
-				 * try { camera.setPreviewDisplay(surfaceHolder); //"this" is a
-				 * SurfaceView which implements SurfaceHolder.Callback, //as
-				 * found in the code examples camera.setPreviewCallback(null);
-				 * // camera.setPreviewCallback(this); camera.startPreview(); }
-				 * catch (IOException exception) { camera.release(); camera =
-				 * null; }
-				 */
+
 
                 try {
                     camera.setPreviewDisplay(surfaceHolder);
@@ -397,7 +345,7 @@ public class CustomCameraActivity extends Activity implements
     OnWheelChangedListener changedListener = new OnWheelChangedListener() {
         public void onChanged(WheelView wheel, int oldValue, int newValue) {
             if (!wheelScrolled) {
-                // updateStatus();
+
             }
         }
     };
@@ -422,12 +370,7 @@ public class CustomCameraActivity extends Activity implements
         return (WheelView) findViewById(id);
     }
 
-    /**
-     * Mixes wheel
-     *
-     * @param id
-     *            the wheel id
-     */
+
     private void mixWheel(int id) {
         WheelView wheel = getWheel(id);
         wheel.scroll(-350 + (int) (Math.random() * 50), 2000);
@@ -549,8 +492,7 @@ public class CustomCameraActivity extends Activity implements
                     }
 
                 } else {
-                    // Toast.makeText(getApplicationContext(),
-                    // "else loop",Toast.LENGTH_LONG).show();
+
                     System.out.println("============else looop-----------");
                     Bitmap scaled = Bitmap.createScaledBitmap(bm, screenWidth,
                             screenHeight, true);
@@ -565,9 +507,8 @@ public class CustomCameraActivity extends Activity implements
 
                     try {
 
-                        //thePic = "file://" + pictureFile.getAbsolutePath();
+
                         System.out.println("===thePic-------"+thePic);
-                        //HomeActivity.CameraArry.add(thePic);
 
 
                         File file=getOutputMediaFile();
@@ -644,23 +585,6 @@ public class CustomCameraActivity extends Activity implements
         setCameraDisplayOrientation(CustomCameraActivity.this,
                 CameraInfo.CAMERA_FACING_BACK, camera);
 
-		/*
-		 * try { Camera.Parameters parameters = camera.getParameters();
-		 * 
-		 * if (this.getResources().getConfiguration().orientation !=
-		 * Configuration.ORIENTATION_LANDSCAPE) { parameters.set("orientation",
-		 * "portrait");
-		 * parameters.setFlashMode(Camera.Parameters.FLASH_MODE_AUTO); // For
-		 * Android 2.2 and above camera.setDisplayOrientation(90); // Uncomment
-		 * for Android 2.0 and above parameters.setRotation(90); } else {
-		 * parameters.set("orientation", "landscape");
-		 * parameters.setFlashMode(Camera.Parameters.FLASH_MODE_AUTO); // For
-		 * Android 2.2 and above camera.setDisplayOrientation(0); // Uncomment
-		 * for Android 2.0 and above parameters.setRotation(0); }
-		 * camera.setParameters(parameters); camera.setPreviewDisplay(holder); }
-		 * catch (IOException exception) { camera.release(); //
-		 * Log.v(LOGTAG,exception.getMessage()); } camera.startPreview();
-		 */
 
         try {
             camera.setPreviewDisplay(holder);
@@ -700,9 +624,9 @@ public class CustomCameraActivity extends Activity implements
         File fileDir = null;
         String state = Environment.getExternalStorageState();
         if (Environment.MEDIA_MOUNTED.equals(state)) {
-            fileDir = new File(Environment.getExternalStorageDirectory(), "OrangePhotobooth");
+            fileDir = new File(Environment.getExternalStorageDirectory(), "Collage Photo Editor");
         }  else {
-            fileDir = new File(getFilesDir(), "OrangePhotobooth");
+            fileDir = new File(getFilesDir(), "Collage Photo Editor");
         }
         if(fileDir != null && !fileDir.exists()) {
             if(!fileDir.mkdir()) {

@@ -117,7 +117,7 @@ public class EffectActivity extends AppCompatActivity implements OnClickListener
 
         ImageLoaderConfiguration config = builder.build();
         imageLoader = ImageLoader.getInstance();
-        imageLoader.init(config);
+        imageLoader.init(ImageLoaderConfiguration.createDefault(this));
     }
 
     @Override
@@ -354,11 +354,7 @@ public class EffectActivity extends AppCompatActivity implements OnClickListener
         return combineImages;
     }
 
-    /****************************************************************************
-     *
-     * @purpose:This Method use to Call mSetImageAsyncTask
-     *
-     ***************************************************************************/
+
 
     private void setImage() {
 
@@ -372,16 +368,6 @@ public class EffectActivity extends AppCompatActivity implements OnClickListener
         }
     }
 
-    /****************************************************************************
-     * mSetImageAsyncTask
-     *
-     * @CreatedDate:
-     * @ModifiedBy: not yet
-     * @ModifiedDate: not yet
-     * @purpose:This Class Use to Create GlcCard With Perameter And Return
-     *               UserId
-     *
-     ***************************************************************************/
 
     private class setImageAsyncTask extends AsyncTask<Void, Void, Void> {
 
